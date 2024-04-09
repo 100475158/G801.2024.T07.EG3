@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_management_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_management_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/GE2_TestCasesTemplate_2024_F1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/GE2_TestCasesTemplate_2024_F2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/bad_IdCard_character_invalid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/bad_IdCard_numeric_character.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_colon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_comma.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_final_brace.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_first_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_fourth_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_inicial_brace.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_label_IdCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_label_IdCard_in_quotes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_label_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_label_localizer_in_quotes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_second_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_third_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_value_IdCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_value_IdCard_in_quotes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_value_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/double_value_localizer_in_quotes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_colon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_comma.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_final_brace.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_first_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_fourth_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_inicial_brace.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_second_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/invalid_third_quote.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_bad_label1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_bad_label2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_bad_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_eliminated_comma.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_empty_json.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_incorrect_IdCard_letter.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_nok.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_ok.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_ok2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_without_bracket.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/key_without_final_bracket.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/nada_IdCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/nada_datos.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/nada_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_IdCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_IdCard_nodo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_colon_field1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_label_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_node_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_quotation1_label1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_quotation1_value1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_quotation2_label1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_quotation2_value1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_valor_IdCard.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_valor_IdCard_nodo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_value1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/no_value_localizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/storeKeys.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/storeRequest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/guestarrival/store_reservation_manipulated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/JSONFiles/store_reservation_manipulated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/python/test_checkout_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/python/test_guest_arrival_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2erqpOPuI9LDuHLtMTbG7wPUFdu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Miguel/PycharmProjects/G801.2024.T07.EG3",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="" />
+      <created>1712673227486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712673227486</updated>
+    </task>
+    <servers />
+  </component>
+</project>
