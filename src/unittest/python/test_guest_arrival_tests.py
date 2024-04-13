@@ -32,9 +32,9 @@ class TestHotelReservation(TestCase):
 
         ##insert the reservation
         with freeze_time("2024/03/22 13:00:00"):
-            hotel_mngr = HotelManager()
+            my_manager = HotelManager()
             #first reservation for valid
-            localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+            localizer = my_manager.room_reservation(credit_card="5105105105105100",
                                                     name_surname="JOSE LOPEZ",
                                                     id_card="12345678Z",
                                                     phone_number="+341234567",
@@ -51,17 +51,17 @@ class TestHotelReservation(TestCase):
         try:
             with open(my_file, "r", encoding="utf-8", newline="") as file:
                 data = json.load(file)
-        except FileNotFoundError as ex:
-            raise HotelManagementException("Wrong file or file path") from ex
-        except json.JSONDecodeError as ex:
-            raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex
+        except FileNotFoundError as exception:
+            raise HotelManagementException("Wrong file or file path") from exception
+        except json.JSONDecodeError as exception:
+            raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
         return data
 
     @freeze_time("2024/07/02 13:00:00")
     def test_case_valid_reservation_invalid_arrival_date(self):
         """Invalid arrival date"""
         test_file = JSON_FILES_GUEST_ARRIVAL + "key_ok.json"
-        mngr = HotelManager()
+        my_manager = HotelManager()
         checkins_file = JSON_FILES_PATH + "store_check_in.json"
         #we calculater the files signature bejore calling the tested method
         if os.path.isfile(checkins_file):
@@ -70,9 +70,9 @@ class TestHotelReservation(TestCase):
         else:
             hash_original = ""
 
-        with self.assertRaises(HotelManagementException) as c_m:
-            mngr.guest_arrival(test_file)
-        self.assertEqual(c_m.exception.message, "Error: today is not reservation date")
+        with self.assertRaises(HotelManagementException) as exception_context:
+            my_manager.guest_arrival(test_file)
+        self.assertEqual(exception_context.exception.message, "Error: today is not reservation date")
 
         #now we check that the signature of the file is the same (the file didn't change)
         if os.path.isfile(checkins_file):
@@ -90,7 +90,7 @@ class TestHotelReservation(TestCase):
         my_cases = JSON_FILES_PATH + "GE2_TestCasesTemplate_2024_F2.csv"
         with open(my_cases, newline='', encoding='utf-8') as csvfile:
             param_test_cases = csv.DictReader(csvfile, delimiter=';')
-            mngr = HotelManager()
+            my_manager = HotelManager()
             for row in param_test_cases:
                 # VALID INVALID;ID TEST;FILE;EXPECTED RESULT
                 test_id = row['ID_TEST']
@@ -99,13 +99,13 @@ class TestHotelReservation(TestCase):
                 test_file = JSON_FILES_GUEST_ARRIVAL + row["FILE"]
                 if valid == "VALID":
                     with self.subTest(test_id + valid):
-                        valor = mngr.guest_arrival(test_file)
+                        valor = my_manager.guest_arrival(test_file)
                         self.assertEqual(result, valor)
                         # Check if this DNI is store in storeRequest.json
                         my_data = self.read_file()
                         found = False
-                        for k in my_data:
-                            if k["_HotelStay__room_key"] == valor:
+                        for data in my_data:
+                            if data["_HotelStay__room_key"] == valor:
                                 found = True
                         # if found is False , this assert fails
                         self.assertTrue(found)
@@ -120,7 +120,7 @@ class TestHotelReservation(TestCase):
                             hash_original = ""
 
                         with self.assertRaises(HotelManagementException) as c_m:
-                            valor = mngr.guest_arrival(test_file)
+                            valor = my_manager.guest_arrival(test_file)
                         self.assertEqual(c_m.exception.message, result)
                         if os.path.isfile(checkins_file):
                             with open(checkins_file, "r", encoding="utf-8", newline="") as file:

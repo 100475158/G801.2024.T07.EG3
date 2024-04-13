@@ -33,9 +33,9 @@ class TestDeliverProduct(TestCase):
         file_test = JSON_FILES_GUEST_ARRIVAL + "key_ok.json"
         ##insert the reservation
         with freeze_time("2024/03/22 13:00:00"):
-            hotel_mngr = HotelManager()
+            my_manager = HotelManager()
             #first reservation for valid
-            localizer = hotel_mngr.room_reservation(credit_card="5105105105105100",
+            localizer = my_manager.room_reservation(credit_card="5105105105105100",
                                                     name_surname="JOSE LOPEZ",
                                                     id_card="12345678Z",
                                                     phone_number="+341234567",
