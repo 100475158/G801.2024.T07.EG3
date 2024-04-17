@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Todos los nombres misteriosos refactorizados">
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_id_card.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittest/python/test_checkout_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittest/python/test_checkout_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittest/python/test_guest_arrival_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittest/python/test_guest_arrival_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,6 +44,57 @@
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation">
+    <configuration name="Python tests for test_guest_arrival_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_guest_arrival_tests.TestHotelReservation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_room_reservation_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_room_reservation_tests.TestHotelReservation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_room_reservation_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
+        <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
+        <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -53,6 +111,14 @@
       <option name="presentableId" value="Default" />
       <updated>1712673227486</updated>
     </task>
+    <task id="LOCAL-00001" summary="Todos los nombres misteriosos refactorizados">
+      <created>1713031930018</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713031930018</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -66,5 +132,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Todos los nombres misteriosos refactorizados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todos los nombres misteriosos refactorizados" />
   </component>
 </project>

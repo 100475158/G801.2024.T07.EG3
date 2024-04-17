@@ -75,16 +75,8 @@ class HotelManager:
         return num_days
 
 
-    @staticmethod
-    def validate_dni(dni):
-        """RETURN TRUE IF THE DNI IS RIGHT, OR FALSE IN OTHER CASE"""
-        letters_verification = {"0": "T", "1": "R", "2": "W", "3": "A", "4": "G", "5": "M",
-             "6": "Y", "7": "F", "8": "P", "9": "D", "10": "X", "11": "B",
-             "12": "N", "13": "J", "14": "Z", "15": "S", "16": "Q", "17": "V",
-             "18": "H", "19": "L", "20": "C", "21": "K", "22": "E"}
-        numbers_dni = int(dni[0:8])
-        index_letter = str(numbers_dni % 23)
-        return dni[8] == letters_verification[index_letter]
+
+
 
 
     def validate_localizer(self, localizer):
@@ -140,21 +132,10 @@ class HotelManager:
                          num_days:int)->str:
         """manges the hotel reservation: creates a reservation and saves it into a json file"""
 
-        format = r'^[0-9]{8}[A-Z]{1}$'
-        patron = re.compile(format)
-        if not patron.fullmatch(id_card):
-            raise HotelManagementException("Invalid IdCard format")
-        if not self.validate_dni(id_card):
-            raise HotelManagementException("Invalid IdCard letter")
 
         room_type = self.validate_room_type(room_type)
 
-
-        format = r"^(?=^.{10,50}$)([a-zA-Z]+(\s[a-zA-Z]+)+)$"
-        patron = re.compile(format)
-        coincide = patron.fullmatch(name_surname)
-        if not coincide:
-            raise HotelManagementException("Invalid name format")
+        self.validate_name_surname(name_surname)
         credit_card = self.validatecreditcard(credit_card)
         arrival_date = self.validate_arrival_date(arrival_date)
         num_days = self.validate_numdays(num_days)
@@ -197,6 +178,14 @@ class HotelManager:
 
         return my_reservation.localizer
 
+    def validate_name_surname(self, name_surname):
+        format = r"^(?=^.{10,50}$)([a-zA-Z]+(\s[a-zA-Z]+)+)$"
+        patron = re.compile(format)
+        coincide = patron.fullmatch(name_surname)
+        if not coincide:
+            raise HotelManagementException("Invalid name format")
+
+
     def guest_arrival(self, file_input:str)->str:
         """manages the arrival of a guest with a reservation"""
         try:
@@ -214,12 +203,6 @@ class HotelManager:
         except KeyError as exception:
             raise HotelManagementException("Error - Invalid Key in JSON") from exception
 
-        format = r'^[0-9]{8}[A-Z]{1}$'
-        patron = re.compile(format)
-        if not patron.fullmatch(my_id_card):
-            raise HotelManagementException("Invalid IdCard format")
-        if not self.validate_dni(my_id_card):
-            raise HotelManagementException("Invalid IdCard letter")
 
         self.validate_localizer(my_localizer)
         # self.validate_localizer() hay que validar
