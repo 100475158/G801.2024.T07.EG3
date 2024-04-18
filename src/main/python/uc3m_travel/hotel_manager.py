@@ -57,13 +57,13 @@ class HotelManager:
             raise HotelManagementException("Invalid date format")
         return arrival_date
 
-    def validate_phonenumber(self, phone_number):
-        """validates the phone number format  using regex"""
+    """def validate_phonenumber(self, phone_number):
+        validates the phone number format  using regex
         patron = re.compile(r"^(\+)[0-9]{9}")
         coincide = patron.fullmatch(phone_number)
         if not coincide:
             raise HotelManagementException("Invalid phone number format")
-        return phone_number
+        return phone_number"""
     def validate_numdays(self,num_days):
         """validates the number of days"""
         try:
@@ -135,11 +135,11 @@ class HotelManager:
 
         room_type = self.validate_room_type(room_type)
 
-        self.validate_name_surname(name_surname)
+        """self.validate_name_surname(name_surname)"""
         credit_card = self.validatecreditcard(credit_card)
         arrival_date = self.validate_arrival_date(arrival_date)
         num_days = self.validate_numdays(num_days)
-        phone_number = self.validate_phonenumber(phone_number)
+        """phone_number = self.validate_phonenumber(phone_number)"""
         my_reservation = HotelReservation(id_card=id_card,
                                           credit_card_number=credit_card,
                                           name_surname=name_surname,
@@ -178,12 +178,12 @@ class HotelManager:
 
         return my_reservation.localizer
 
-    def validate_name_surname(self, name_surname):
+    """def validate_name_surname(self, name_surname):
         format = r"^(?=^.{10,50}$)([a-zA-Z]+(\s[a-zA-Z]+)+)$"
         patron = re.compile(format)
         coincide = patron.fullmatch(name_surname)
         if not coincide:
-            raise HotelManagementException("Invalid name format")
+            raise HotelManagementException("Invalid name format")"""
 
 
     def guest_arrival(self, file_input:str)->str:

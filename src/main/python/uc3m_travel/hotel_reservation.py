@@ -2,8 +2,8 @@
 import hashlib
 from datetime import datetime
 from .attribute.attribute_id_card import IdCard
-
-
+from .attribute.attribute_name_surname import NameSurname
+from .attribute.attribute_phone_number import PhoneNumber
 class HotelReservation:
     """Class for representing hotel reservations"""
     #pylint: disable=too-many-arguments, too-many-instance-attributes
@@ -21,8 +21,8 @@ class HotelReservation:
         justnow = datetime.utcnow()
         self.__arrival = arrival
         self.__reservation_date = datetime.timestamp(justnow)
-        self.__name_surname = name_surname
-        self.__phone_number = phone_number
+        self.__name_surname = NameSurname(name_surname).value
+        self.__phone_number = PhoneNumber(phone_number).value
         self.__room_type = room_type
         self.__num_days = num_days
         self.__localizer =  hashlib.md5(str(self).encode()).hexdigest()
