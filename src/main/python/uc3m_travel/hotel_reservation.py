@@ -5,6 +5,10 @@ from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_name_surname import NameSurname
 from .attribute.attribute_phone_number import PhoneNumber
 from .attribute.attribute_arrival_date import ArrivalDate
+from .attribute.attribute_room_type import RoomType
+from .attribute.attribute_num_days import NumDays
+
+
 
 class HotelReservation:
     """Class for representing hotel reservations"""
@@ -25,8 +29,8 @@ class HotelReservation:
         self.__reservation_date = datetime.timestamp(justnow)
         self.__name_surname = NameSurname(name_surname).value
         self.__phone_number = PhoneNumber(phone_number).value
-        self.__room_type = room_type
-        self.__num_days = num_days
+        self.__room_type = RoomType(room_type).value
+        self.__num_days = NumDays(num_days).value
         self.__localizer =  hashlib.md5(str(self).encode()).hexdigest()
 
     def __str__(self):

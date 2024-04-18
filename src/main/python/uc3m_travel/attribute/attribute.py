@@ -9,8 +9,8 @@ class Attribute:
         self._error_message  = ""
         self._attr_value = ""
     def _validate(self, attr_value):
-        myregex= re.compile(self._attr_pattern)
-        regex_matches = myregex.fullmatch(attr_value)
+        coincide= re.compile(self._attr_pattern)
+        regex_matches = coincide.fullmatch(attr_value)
         if not regex_matches:
             raise HotelManagementException(self._error_message)
         return attr_value

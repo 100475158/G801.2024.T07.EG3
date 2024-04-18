@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Codigo duplicado">
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_arrival_date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_localizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_num_days.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_room_type.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" afterDir="false" />
     </list>
@@ -136,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713435818488</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Codigo duplicado">
+      <created>1713437980777</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713437980777</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
