@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Todos los nombres misteriosos refactorizados">
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_id_card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Codigo duplicado">
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_name_surname.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_phone_number.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713031930018</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Codigo duplicado">
+      <created>1713365783842</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713365783842</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Todos los nombres misteriosos refactorizados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todos los nombres misteriosos refactorizados" />
+    <MESSAGE value="Codigo duplicado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Codigo duplicado" />
   </component>
 </project>
