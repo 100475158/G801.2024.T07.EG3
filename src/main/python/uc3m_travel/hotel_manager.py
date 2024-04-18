@@ -2,6 +2,8 @@
 import re
 import json
 from datetime import datetime
+
+from uc3m_travel.attribute.attribute_credit_card import CreditCard
 from uc3m_travel.hotel_management_exception import HotelManagementException
 from uc3m_travel.hotel_reservation import HotelReservation
 from uc3m_travel.hotel_stay import HotelStay
@@ -14,86 +16,7 @@ class HotelManager:
     def __init__(self):
         pass
 
-    def validatecreditcard(self, credit_card):
-        """validates the credit card number using luhn altorithm"""
-        #taken form
-        # https://allwin-raju-12.medium.com/
-        # credit-card-number-validation-using-luhns-algorithm-in-python-c0ed2fac6234
-        # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE GUID
-        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER CASE
 
-        patron = re.compile(r"^[0-9]{16}")
-        coincide = patron.fullmatch(credit_card)
-        if not coincide:
-            raise HotelManagementException("Invalid credit card format")
-        def digits_of(card_number):
-            return [int(digit) for digit in str(card_number)]
-
-
-        digits = digits_of(credit_card)
-        odd_digits = digits[-1::-2]
-        even_digits = digits[-2::-2]
-        checksum = 0
-        checksum += sum(odd_digits)
-        for number in even_digits:
-            checksum += sum(digits_of(number * 2))
-        if not checksum % 10 == 0:
-            raise HotelManagementException("Invalid credit card number (not luhn)")
-        return credit_card
-
-    """def validate_room_type(self, room_type):
-        validates the room type value using regex
-        patron = re.compile(r"(SINGLE|DOUBLE|SUITE)")
-        coincide = patron.fullmatch(room_type)
-        if not coincide:
-            raise HotelManagementException("Invalid roomtype value")
-        return room_type"""
-
-    """def validate_arrival_date(self, arrival_date):
-        validates the arrival date format  using regex
-        patron = re.compile(r"^(([0-2]\d|-3[0-1])\/(0\d|1[0-2])\/\d\d\d\d)$")
-        coincide = patron.fullmatch(arrival_date)
-        if not coincide:
-            raise HotelManagementException("Invalid date format")
-        return arrival_date"""
-
-    """def validate_phonenumber(self, phone_number):
-        validates the phone number format  using regex
-        patron = re.compile(r"^(\+)[0-9]{9}")
-        coincide = patron.fullmatch(phone_number)
-        if not coincide:
-            raise HotelManagementException("Invalid phone number format")
-        return phone_number"""
-    def validate_numdays(self,num_days):
-        """validates the number of days"""
-        try:
-            days = int(num_days)
-        except ValueError as exception:
-            raise HotelManagementException("Invalid num_days datatype") from exception
-        if (days < 1 or days > 10):
-            raise HotelManagementException("Numdays should be in the range 1-10")
-        return num_days
-
-
-
-
-
-
-    def validate_localizer(self, localizer):
-        """validates the localizer format using a regex"""
-        format = r'^[a-fA-F0-9]{32}$'
-        patron = re.compile(format)
-        if not patron.fullmatch(localizer):
-            raise HotelManagementException("Invalid localizer")
-        return localizer
-
-    def validate_roomkey(self, room_key):
-        """validates the roomkey format using a regex"""
-        format = r'^[a-fA-F0-9]{64}$'
-        patron = re.compile(format)
-        if not patron.fullmatch(room_key):
-            raise HotelManagementException("Invalid room key format")
-        return room_key
 
     def read_data_from_json(self, file):
         """reads the content of a json file with two fields: CreditCard and phoneNumber"""
@@ -116,7 +39,7 @@ class HotelManager:
                                    arrival="20/01/2024")
         except KeyError as exception:
             raise HotelManagementException("JSON Decode Error - Invalid JSON Key") from exception
-        if not self.validatecreditcard(credit_card):
+        if not CreditCard(credit_card):
             raise HotelManagementException("Invalid credit card number")
         # Close the file
         return reservation
@@ -133,13 +56,7 @@ class HotelManager:
         """manges the hotel reservation: creates a reservation and saves it into a json file"""
 
 
-        """room_type = self.validate_room_type(room_type)"""
 
-        """self.validate_name_surname(name_surname)"""
-        credit_card = self.validatecreditcard(credit_card)
-        """arrival_date = self.validate_arrival_date(arrival_date)"""
-        num_days = self.validate_numdays(num_days)
-        """phone_number = self.validate_phonenumber(phone_number)"""
         my_reservation = HotelReservation(id_card=id_card,
                                           credit_card_number=credit_card,
                                           name_surname=name_surname,
@@ -178,12 +95,6 @@ class HotelManager:
 
         return my_reservation.localizer
 
-    """def validate_name_surname(self, name_surname):
-        format = r"^(?=^.{10,50}$)([a-zA-Z]+(\s[a-zA-Z]+)+)$"
-        patron = re.compile(format)
-        coincide = patron.fullmatch(name_surname)
-        if not coincide:
-            raise HotelManagementException("Invalid name format")"""
 
 
     def guest_arrival(self, file_input:str)->str:
@@ -204,8 +115,8 @@ class HotelManager:
             raise HotelManagementException("Error - Invalid Key in JSON") from exception
 
 
-        self.validate_localizer(my_localizer)
-        # self.validate_localizer() hay que validar
+        """self.validate_localizer(my_localizer)
+        # self.validate_localizer() hay que validar"""
 
         #buscar en almacen
         file_store = JSON_FILES_PATH + "store_reservation.json"
@@ -292,7 +203,7 @@ class HotelManager:
 
     def guest_checkout(self, room_key:str)->bool:
         """manages the checkout of a guest"""
-        self.validate_roomkey(room_key)
+        """self.validate_roomkey(room_key)"""
         #check thawt the roomkey is stored in the checkins file
         file_store = JSON_FILES_PATH + "store_check_in.json"
         try:

@@ -7,6 +7,7 @@ from .attribute.attribute_phone_number import PhoneNumber
 from .attribute.attribute_arrival_date import ArrivalDate
 from .attribute.attribute_room_type import RoomType
 from .attribute.attribute_num_days import NumDays
+from .attribute.attribute_credit_card import CreditCard
 
 
 
@@ -22,7 +23,7 @@ class HotelReservation:
                  arrival:str,
                  num_days:int):
         """constructor of reservation objects"""
-        self.__credit_card_number = credit_card_number
+        self.__credit_card_number = CreditCard(credit_card_number).value
         self.__id_card = IdCard(id_card).value
         justnow = datetime.utcnow()
         self.__arrival = ArrivalDate(arrival).value
@@ -31,7 +32,7 @@ class HotelReservation:
         self.__phone_number = PhoneNumber(phone_number).value
         self.__room_type = RoomType(room_type).value
         self.__num_days = NumDays(num_days).value
-        self.__localizer =  hashlib.md5(str(self).encode()).hexdigest()
+        self.__localizer = hashlib.md5(str(self).encode()).hexdigest()
 
     def __str__(self):
         """return a json string with the elements required to calculate the localizer"""
