@@ -49,13 +49,13 @@ class HotelManager:
             raise HotelManagementException("Invalid roomtype value")
         return room_type
 
-    def validate_arrival_date(self, arrival_date):
-        """validates the arrival date format  using regex"""
+    """def validate_arrival_date(self, arrival_date):
+        validates the arrival date format  using regex
         patron = re.compile(r"^(([0-2]\d|-3[0-1])\/(0\d|1[0-2])\/\d\d\d\d)$")
         coincide = patron.fullmatch(arrival_date)
         if not coincide:
             raise HotelManagementException("Invalid date format")
-        return arrival_date
+        return arrival_date"""
 
     """def validate_phonenumber(self, phone_number):
         validates the phone number format  using regex
