@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Parte 2 avances">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +29,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -48,7 +47,8 @@
     &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
     &quot;Python.hotel_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.json_store.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -149,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
-        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
-        <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
         <item itemvalue="Python.hotel_manager" />
         <item itemvalue="Python.json_store" />
+        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
+        <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -207,15 +207,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713437980777</updated>
     </task>
-    <task id="LOCAL-00006" summary="Parte 2 avances">
-      <option name="closed" value="true" />
-      <created>1713618906573</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713618906573</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

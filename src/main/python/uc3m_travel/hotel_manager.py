@@ -178,7 +178,7 @@ class HotelManager:
                                localizer=my_localizer, roomtype=reservation_room_type)
 
 
-        reservation_store = JsonStore()
+        reservation_store = JsonStore(JSON_FILES_PATH)
         reservation_store.save_checkin(my_checkin)
         return my_checkin.room_key
 
@@ -253,7 +253,7 @@ class HotelManager:
 
         room_checkout={"room_key":  room_key, "checkout_time":datetime.timestamp(datetime.utcnow())}
 
-        reservation_store = JsonStore()
+        reservation_store = JsonStore(JSON_FILES_PATH)
         reservation_store.save_checkout(room_checkout)
         return True
 
