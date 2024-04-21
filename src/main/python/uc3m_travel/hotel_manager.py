@@ -107,7 +107,7 @@ class HotelManager:
         except json.JSONDecodeError as exception:
             raise HotelManagementException ("JSON Decode Error - Wrong JSON Format") from exception
 
-        # comprobar valores del fichero
+        #comprobar valores del fichero
         try:
             my_localizer = input_list["Localizer"]
             my_id_card = input_list["IdCard"]
