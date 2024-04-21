@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Codigo duplicado">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_phone_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_phone_number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,64 +26,79 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2erqpOPuI9LDuHLtMTbG7wPUFdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
-    "Python tests.Python tests in test_guest_arrival_tests.py.executor": "Run",
-    "Python tests.Python tests in test_room_reservation_tests.py.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_checkout_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_guest_arrival_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_room_reservation_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_store.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_checkout_tests.py">
-    <configuration name="Python tests for test_guest_arrival_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_room_reservation_tests.py">
+    <configuration name="hotel_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/uc3m_travel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_guest_arrival_tests.TestHotelReservation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_room_reservation_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="json_store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_room_reservation_tests.TestHotelReservation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_checkout_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -132,18 +148,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
-        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
-        <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
-        <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
+        <item itemvalue="Python.hotel_manager" />
+        <item itemvalue="Python.json_store" />
+        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
+        <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -191,14 +207,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713437980777</updated>
     </task>
-    <task id="LOCAL-00006" summary="Codigo duplicado">
-      <created>1713449187444</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713449187444</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +224,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Todos los nombres misteriosos refactorizados" />
     <MESSAGE value="Codigo duplicado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Codigo duplicado" />
+    <MESSAGE value="Parte 2 avances" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parte 2 avances" />
   </component>
 </project>
