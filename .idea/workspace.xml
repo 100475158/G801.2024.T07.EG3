@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Parte 2 avances">
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_phone_number.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/attribute/attribute_phone_number.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,27 +27,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2erqpOPuI9LDuHLtMTbG7wPUFdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
-    "Python tests.Python tests in test_guest_arrival_tests.py.executor": "Run",
-    "Python tests.Python tests in test_room_reservation_tests.py.executor": "Run",
-    "Python.__init__.executor": "Run",
-    "Python.hotel_manager.executor": "Run",
-    "Python.json_store.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in test_checkout_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_guest_arrival_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_room_reservation_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.hotel_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.json_store.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
@@ -153,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
-        <item itemvalue="Python.hotel_manager" />
-        <item itemvalue="Python.json_store" />
         <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
         <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
+        <item itemvalue="Python.hotel_manager" />
+        <item itemvalue="Python.json_store" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713437980777</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Parte 2 avances">
+      <option name="closed" value="true" />
+      <created>1713618906573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713618906573</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

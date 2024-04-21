@@ -1,8 +1,9 @@
 import hashlib
 import json
 
-from uc3m_travel import JSON_FILES_PATH
-from uc3m_travel import  HotelManagementException
+from uc3m_travel.hotel_management_config import JSON_FILES_PATH
+from uc3m_travel.hotel_management_exception import HotelManagementException
+
 
 
 class JsonStore:
