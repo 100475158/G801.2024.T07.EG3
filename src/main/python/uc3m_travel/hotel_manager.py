@@ -10,13 +10,12 @@ from uc3m_travel.hotel_stay import HotelStay
 from uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from freezegun import freeze_time
 
-from uc3m_travel.storage.json_store import JsonStore
-
 
 class HotelManager:
     """Class with all the methods for managing reservations and stays"""
     def __init__(self):
         pass
+
 
 
     def read_data_from_json(self, file):
@@ -66,11 +65,7 @@ class HotelManager:
                                           arrival=arrival_date,
                                           num_days=num_days)
 
-        reservation_store = JsonStore()
-        reservation_store.save_reservation(my_reservation)
-        return my_reservation.localizer
-
-        '''# escribo el fichero Json con todos los datos
+        # escribo el fichero Json con todos los datos
         file_store = JSON_FILES_PATH + "store_reservation.json"
 
         #leo los datos del fichero si existe , y si no existe creo una lista vacia
@@ -98,7 +93,7 @@ class HotelManager:
         except FileNotFoundError as exception:
             raise HotelManagementException("Wrong file  or file path") from exception
 
-        return my_reservation.localizer'''
+        return my_reservation.localizer
 
 
 
@@ -177,13 +172,7 @@ class HotelManager:
         my_checkin = HotelStay(idcard=my_id_card, numdays=int(reservation_days),
                                localizer=my_localizer, roomtype=reservation_room_type)
 
-
-        reservation_store = JsonStore(JSON_FILES_PATH)
-        reservation_store.save_checkin(my_checkin)
-        return my_checkin.room_key
-
-
-        ''' #Ahora lo guardo en el almacen nuevo de checkin
+        #Ahora lo guardo en el almacen nuevo de checkin
         # escribo el fichero Json con todos los datos
         file_store = JSON_FILES_PATH + "store_check_in.json"
 
@@ -210,7 +199,7 @@ class HotelManager:
         except FileNotFoundError as exception:
             raise HotelManagementException("Wrong file  or file path") from exception
 
-        return my_checkin.room_key'''
+        return my_checkin.room_key
 
     def guest_checkout(self, room_key:str)->bool:
         """manages the checkout of a guest"""
@@ -253,12 +242,7 @@ class HotelManager:
 
         room_checkout={"room_key":  room_key, "checkout_time":datetime.timestamp(datetime.utcnow())}
 
-        reservation_store = JsonStore(JSON_FILES_PATH)
-        reservation_store.save_checkout(room_checkout)
-        return True
-
-
-        '''room_key_list.append(room_checkout)
+        room_key_list.append(room_checkout)
 
         try:
             with open(file_store_checkout, "w", encoding="utf-8", newline="") as file:
@@ -267,4 +251,3 @@ class HotelManager:
             raise HotelManagementException("Wrong file  or file path") from exception
 
         return True
-'''
