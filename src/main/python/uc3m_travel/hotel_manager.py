@@ -9,6 +9,9 @@ from uc3m_travel.hotel_reservation import HotelReservation
 from uc3m_travel.hotel_stay import HotelStay
 from uc3m_travel.hotel_management_config import JSON_FILES_PATH
 from freezegun import freeze_time
+from .attribute.attribute_id_card import IdCard
+from .attribute.attribute_localizer import Localizer
+from .attribute.attribute_room_key import RoomKey
 
 
 class HotelManager:
@@ -114,7 +117,8 @@ class HotelManager:
         except KeyError as exception:
             raise HotelManagementException("Error - Invalid Key in JSON") from exception
 
-
+        IdCard(my_id_card)
+        Localizer(my_localizer)
         """self.validate_localizer(my_localizer)
         # self.validate_localizer() hay que validar"""
 
@@ -203,6 +207,7 @@ class HotelManager:
 
     def guest_checkout(self, room_key:str)->bool:
         """manages the checkout of a guest"""
+        RoomKey(room_key)
         """self.validate_roomkey(room_key)"""
         #check thawt the roomkey is stored in the checkins file
         file_store = JSON_FILES_PATH + "store_check_in.json"
