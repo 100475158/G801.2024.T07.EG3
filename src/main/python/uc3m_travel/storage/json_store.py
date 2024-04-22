@@ -15,6 +15,7 @@ class JsonStore():
         self.load_list_from_file()
         for item in self._data_list:
             if item[key] == value:
+                return item
         return None
     @property
     def hash(self):

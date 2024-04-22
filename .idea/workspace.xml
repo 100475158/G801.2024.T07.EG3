@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Todos los unitest funcionan">
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-    </list>
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Avances almacenes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713730809539</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Avances almacenes">
+      <created>1713797868646</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713797868647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +223,7 @@
     <MESSAGE value="Codigo duplicado" />
     <MESSAGE value="Validaciones terminadas" />
     <MESSAGE value="Todos los unitest funcionan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todos los unitest funcionan" />
+    <MESSAGE value="Avances almacenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avances almacenes" />
   </component>
 </project>
