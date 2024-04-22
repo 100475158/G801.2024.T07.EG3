@@ -12,7 +12,7 @@ from freezegun import freeze_time
 from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_localizer import Localizer
 from .attribute.attribute_room_key import RoomKey
-
+"""from json_store import JsonStore"""
 
 class HotelManager:
     """Class with all the methods for managing reservations and stays"""
@@ -67,8 +67,9 @@ class HotelManager:
                                           room_type=room_type,
                                           arrival=arrival_date,
                                           num_days=num_days)
-
+        """reservation_store= JsonStore()
         # escribo el fichero Json con todos los datos
+        reservation_store.save_reservation(my_reservation)"""
         file_store = JSON_FILES_PATH + "store_reservation.json"
 
         #leo los datos del fichero si existe , y si no existe creo una lista vacia
