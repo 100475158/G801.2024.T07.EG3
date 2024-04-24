@@ -6,6 +6,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_reservation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unittest/python/test_singleton_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/unittest/python/test_singleton_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713886747859</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Avances almacenes">
+      <created>1713888651142</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713888651142</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,6 +1,6 @@
 import unittest
 from uc3m_travel.storage.reservation_json_store import ReservationJsonStore
-from uc3m_travel import HotelManager
+from uc3m_travel.hotel_manager import HotelManager
 class MyTestCase(unittest.TestCase):
     def test_singleton(self):
         mi_primera_instancia= HotelManager()
@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual(mi_primera_instancia, mi_segunda_instancia )  # add assertion here
 
-    def test_singleton(self):
+    def test_singleton2(self):
         mi_primera_instancia= ReservationJsonStore()
         mi_segunda_instancia= ReservationJsonStore()
 

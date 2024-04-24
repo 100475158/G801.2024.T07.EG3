@@ -2,7 +2,6 @@
 import re
 import json
 from datetime import datetime
-
 from uc3m_travel.attribute.attribute_credit_card import CreditCard
 from uc3m_travel.hotel_management_exception import HotelManagementException
 from uc3m_travel.hotel_reservation import HotelReservation
@@ -13,7 +12,7 @@ from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_localizer import Localizer
 from .attribute.attribute_room_key import RoomKey
 """from .attribute.json_store import JsonStore"""
-
+from uc3m_travel.storage.reservation_json_store import ReservationJsonStore
 class HotelManager:
     class __HotelManager:
         """Class with all the methods for managing reservations and stays"""
@@ -68,52 +67,22 @@ class HotelManager:
                                               room_type=room_type,
                                               arrival=arrival_date,
                                               num_days=num_days)
-            """reservation_store= JsonStore()
-            # escribo el fichero Json con todos los datos
-            reservation_store.save_reservation(my_reservation)"""
-            file_store = JSON_FILES_PATH + "store_reservation.json"
+            reservation_store= ReservationJsonStore()
+            reservation_store.add_item(my_reservation)
+            reservation_store.save_store()
 
-            #leo los datos del fichero si existe , y si no existe creo una lista vacia
-            data_list = self.load_store(file_store)
-
-            #compruebo que esta reserva no esta en la lista
-            self.find_item(data_list, my_reservation)
-            #añado los datos de mi reserva a la lista , a lo que hubiera
-            data_list.append(my_reservation.__dict__)
-
-            #escribo la lista en el fichero
-            self.save_store(data_list, file_store)
 
             return my_reservation.localizer
 
-        def save_store(self, data_list, file_store):
-            try:
-                with open(file_store, "w", encoding="utf-8", newline="") as file:
-                    json.dump(data_list, file, indent=2)
-            except FileNotFoundError as exception:
-                raise HotelManagementException("Wrong file  or file path") from exception
-
-        def find_item(self, data_list, my_reservation):
-            for item in data_list:
-                if my_reservation.localizer == item["_HotelReservation__localizer"]:
-                    raise HotelManagementException("Reservation already exists")
-                if my_reservation.id_card == item["_HotelReservation__id_card"]:
-                    raise HotelManagementException("This ID card has another reservation")
-
-        def load_store(self, file_store):
-            try:
-                with open(file_store, "r", encoding="utf-8", newline="") as file:
-                    data_list = json.load(file)
-            except FileNotFoundError:
-                data_list = []
-            except json.JSONDecodeError as exception:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
-            return data_list
 
         def guest_arrival(self, file_input:str)->str:
             """manages the arrival of a guest with a reservation"""
-            my_checkin = self.create_guest_arrival_from_file(file_input)
+            """input_list= self.read_input_file(file_input)
+            my_id_card, my_localizer = self.read_input_data_from_file(input_list)"""
+            my_checkin = HotelStay.create_guest_arrival_from_file(file_input)
 
+
+            """new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)"""
             #Ahora lo guardo en el almacen nuevo de checkin
             # escribo el fichero Json con todos los datos
             file_store = JSON_FILES_PATH + "store_check_in.json"

@@ -13,12 +13,13 @@ class HotelStay():
                  idcard:str,
                  localizer:str,
                  numdays:int,
-                 roomtype:str):
+                 roomtype:str):#se supone q hay q eliminar esos num_days y roomtype
         """constructor for HotelStay objects"""
         self.__alg = "SHA-256"
-        self.__type = RoomType(roomtype).value
         self.__idcard = IdCard(idcard).value
         self.__localizer = Localizer(localizer).value
+        reservation= HotelReservation.create_reservation_from_arrival(localizer)
+        self.__type = reservation
         justnow = datetime.utcnow()
         self.__arrival = datetime.timestamp(justnow)
         #timestamp is represented in seconds.miliseconds
