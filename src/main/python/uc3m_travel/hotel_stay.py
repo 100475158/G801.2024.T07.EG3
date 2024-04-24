@@ -4,8 +4,8 @@ import hashlib
 from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_room_type import RoomType
 from .attribute.attribute_localizer import Localizer
-from uc3m_travel.hotel_management_exception import HotelManagementException
-from uc3m_travel.hotel_reservation import HotelReservation
+from .hotel_management_exception import HotelManagementException
+from .hotel_reservation import HotelReservation
 
 class HotelStay():
     """Class for representing hotel stays"""
@@ -73,9 +73,9 @@ class HotelStay():
 
     @classmethod
     def create_guest_arrival_from_file(cls, file_input):
-        input_list = self.read_input_file(file_input)
+        input_list = cls.read_input_file(file_input)
         # comprobar valores del fichero
-        my_id_card, my_localizer = self.read_input_data_from_file(input_list)
+        my_id_card, my_localizer = cls.read_input_data_from_file(input_list)
         new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
         # compruebo si hoy es la fecha de checkin
         reservation_format = "%d/%m/%Y"
