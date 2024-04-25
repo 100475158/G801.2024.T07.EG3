@@ -71,11 +71,11 @@ class HotelStay():
         """returns the value of the departure date"""
         self.__departure = value
 
-    @classmethod
-    def create_guest_arrival_from_file(cls, file_input):
-        input_list = cls.read_input_file(file_input)
+    @staticmethod
+    def create_guest_arrival_from_file(file_input):
+        input_list = HotelStay.read_input_file(file_input)
         # comprobar valores del fichero
-        my_id_card, my_localizer = cls.read_input_data_from_file(input_list)
+        my_id_card, my_localizer = HotelStay.read_input_data_from_file(input_list)
         new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
         # compruebo si hoy es la fecha de checkin
         reservation_format = "%d/%m/%Y"
