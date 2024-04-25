@@ -82,16 +82,10 @@ class HotelManager:
             checkout1 = JsonStoreCheckout()
             room_key_list = checkout1.read_input_file(file_store, "Error: store checkin not found")
 
-
             # comprobar que esa room_key es la que me han dado
             #cuando creemos find checkin de la f2 podremos extraerlo
-            found = False
-            for item in room_key_list:
-                if room_key == item["_HotelStay__room_key"]:
-                    departure_date_timestamp = item["_HotelStay__departure"]
-                    found = True
-            if not found:
-                raise HotelManagementException ("Error: room key not found")
+            checkin1 = JsonStoreCheckin()
+            departure_date_timestamp = checkin1.validate_room_key(room_key, room_key_list)
 
             today = datetime.utcnow().date()
             if datetime.fromtimestamp(departure_date_timestamp).date() != today:
