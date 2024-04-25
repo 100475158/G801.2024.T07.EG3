@@ -19,8 +19,7 @@ class HotelStay():
         self.__alg = "SHA-256"
         self.__idcard = IdCard(idcard).value
         self.__localizer = Localizer(localizer).value
-        reservation= HotelReservation.create_reservation_from_arrival(idcard, localizer)
-        self.__type = reservation
+        self.__type = roomtype
         justnow = datetime.utcnow()
         self.__arrival = datetime.timestamp(justnow)
         #timestamp is represented in seconds.miliseconds

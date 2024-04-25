@@ -55,16 +55,16 @@ class HotelManager:
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
             room_key_list = self.read_file(file_store)
 
-            my_item = JsonStore()
+            my_item = JsonStore(file_store)
             # comprobar que no he hecho otro ckeckin antes
             item = my_item.find_item("_HotelStay__room_key", my_checkin.room_key)
-            if item == None:
+            if item != None:
                 raise HotelManagementException ("ckeckin  ya realizado")
 
             #añado los datos de mi reserva a la lista , a lo que hubiera
-            room_key_list.append(my_checkin.__dict__)
+            my_item.add_item(my_checkin)
 
-            self.save_store(room_key_list, file_store)
+            my_item.save_store()
 
             return my_checkin.room_key
 
