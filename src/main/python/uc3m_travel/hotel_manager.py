@@ -55,7 +55,7 @@ class HotelManager:
             my_store_checkin= JsonStoreCheckin()
 
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
-            room_key_list = self.read_file(file_store)
+            my_store_checkin.load_store()
 
             """my_item = JsonStore(file_store)"""
             # comprobar que no he hecho otro ckeckin antes
@@ -69,6 +69,8 @@ class HotelManager:
             my_store_checkin.save_store()
 
             return my_checkin.room_key
+
+
 
         def read_file(self, file_store):
             try:
