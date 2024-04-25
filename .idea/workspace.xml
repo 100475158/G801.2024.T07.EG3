@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb">
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +46,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
+    "Python tests.Python tests in test_guest_arrival_tests.py.executor": "Run",
+    "Python tests.Python tests in test_room_reservation_tests.py.executor": "Run",
+    "Python tests.Python tests in test_singleton_test.py.executor": "Run",
     "Python.checkout_json_store.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true"
   }
@@ -79,51 +81,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_checkout_tests.TestDeliverProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_checkout_tests.TestDeliverProduct&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_guest_arrival_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_guest_arrival_tests.TestHotelReservation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_room_reservation_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_room_reservation_tests.TestHotelReservation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests in test_checkout_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="ENV_FILES" value="" />
@@ -139,13 +96,58 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_guest_arrival_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_guest_arrival_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_room_reservation_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_singleton_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_singleton_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
         <item itemvalue="Python.checkout_json_store" />
-        <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
-        <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
-        <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
+        <item itemvalue="Python tests.Python tests in test_singleton_test.py" />
+        <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
+        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -321,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714075562917</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb">
+      <option name="closed" value="true" />
+      <created>1714075831813</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714075831813</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +366,7 @@
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2" />
     <MESSAGE value="Refactorizo en hotel manager para leer archivo y crear room_key_list. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb" />
+    <MESSAGE value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
   </component>
 </project>

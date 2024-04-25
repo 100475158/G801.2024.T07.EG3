@@ -51,7 +51,7 @@ class HotelManager:
 
             #Ahora lo guardo en el almacen nuevo de checkin
             # escribo el fichero Json con todos los datos
-            file_store = JSON_FILES_PATH + "store_check_in.json"
+
             my_store_checkin= JsonStoreCheckin()
 
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
