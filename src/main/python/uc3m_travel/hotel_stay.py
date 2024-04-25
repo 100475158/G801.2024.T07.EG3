@@ -74,7 +74,7 @@ class HotelStay():
     @staticmethod
     def create_guest_arrival_from_file(file_input):
         my_stay = JsonStore(JSON_FILES_PATH +  "store_check_in.json")
-        input_list = my_stay.read_input_file(file_input)
+        input_list = my_stay.read_input_file(file_input,"Error: file input not found")
         # comprobar valores del fichero
         my_id_card, my_localizer = my_stay.read_input_data_from_file(input_list)
         new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
