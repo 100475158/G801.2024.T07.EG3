@@ -157,17 +157,8 @@ class HotelManager:
             my_checkout= JsonStoreCheckout()
             room_key_list=my_checkout.load_store()
 
-            """try:
-                with open(file_store_checkout, "r", encoding="utf-8", newline="") as file:
-                    room_key_list = json.load(file)
-            except FileNotFoundError as ex:
-                room_key_list = []
-            except json.JSONDecodeError as ex:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex"""
+            my_checkout.find_item_checkout(room_key)
 
-            for checkout in room_key_list:
-                if checkout["room_key"] == room_key:
-                    raise HotelManagementException("Guest is already out")
 
             room_checkout = {"room_key": room_key, "checkout_time": datetime.timestamp(datetime.utcnow())}
 

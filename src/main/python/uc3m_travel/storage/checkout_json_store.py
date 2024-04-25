@@ -7,11 +7,10 @@ class JsonStoreCheckout(JsonStore):
         self._file_name = JSON_FILES_PATH + "store_check_out.json"
         self._data_list=[]
 
-    def add_item(self, item):
+    def find_item_checkout(self, value):
         print(self._file_name)
-        found = self.find_item("room_key", item["room_key"])
+        found = self.find_item("room_key", value)
         if found is not None:
             raise HotelManagementException("Guest is already out")
-        self._data_list.append(item)
 
 
