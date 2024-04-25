@@ -57,7 +57,6 @@ class HotelManager:
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
             my_store_checkin.load_store()
 
-            """my_item = JsonStore(file_store)"""
             # comprobar que no he hecho otro ckeckin antes
             item = my_store_checkin.find_item("_HotelStay__room_key", my_checkin.room_key)
             if item != None:
@@ -72,31 +71,13 @@ class HotelManager:
 
 
 
-        def read_file(self, file_store):
-            try:
-                with open(file_store, "r", encoding="utf-8", newline="") as file:
-                    room_key_list = json.load(file)
-            except FileNotFoundError as exception:
-                room_key_list = []
-            except json.JSONDecodeError as exception:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
-            return room_key_list
-
-
-
-
-        def find_reservation(self, my_localizer, store_list):
-            for item in store_list:
-                if my_localizer == item["_HotelReservation__localizer"]:
-                    return item
-            raise HotelManagementException("Error: localizer not found")
-
         def guest_checkout(self, room_key:str)->bool:
             """manages the checkout of a guest"""
             room_key= RoomKey(room_key).value
             """self.validate_roomkey(room_key)"""
             #check thawt the roomkey is stored in the checkins file
             file_store = JSON_FILES_PATH + "store_check_in.json"
+            #Mirar si es igual al read que ya hay y si no lo extraemos a la clase hija
             try:
                 with open(file_store, "r", encoding="utf-8", newline="") as file:
                     room_key_list = json.load(file)
@@ -132,11 +113,7 @@ class HotelManager:
 
             my_checkout.save_store()
 
-            """try:
-                with open(file_store_checkout, "w", encoding="utf-8", newline="") as file:
-                    json.dump(room_key_list, file, indent=2)
-            except FileNotFoundError as ex:
-                raise HotelManagementException("Wrong file  or file path") from ex"""
+
 
             return True
             """file_store_checkout = JSON_FILES_PATH + "store_check_out.json"

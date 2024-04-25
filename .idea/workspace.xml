@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Funccionan los test de la f3">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="F">
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -335,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714069828441</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="F">
+      <created>1714070202319</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714070202319</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,6 +365,7 @@
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2" />
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2, y falla" />
     <MESSAGE value="Funccionan los test de la f3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Funccionan los test de la f3" />
+    <MESSAGE value="F" />
+    <option name="LAST_COMMIT_MESSAGE" value="F" />
   </component>
 </project>
