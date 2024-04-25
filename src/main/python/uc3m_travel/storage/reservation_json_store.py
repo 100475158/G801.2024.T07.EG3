@@ -17,14 +17,3 @@ class ReservationJsonStore(JsonStore):
             raise HotelManagementException("This ID card has another reservation")
         super().add_item(item)
 
-
-
-
-
-
-    """__instance= None
-    def __new__(cls):
-        if not ReservationJsonStore.__instance:
-            ReservationJsonStore.__instance= ReservationJsonStore.__ReservationJsonStore()
-        return ReservationJsonStore"""
-
