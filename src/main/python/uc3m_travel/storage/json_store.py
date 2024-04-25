@@ -107,3 +107,4 @@ class JsonParser():
         """Returns a dictinary with content"""
         return self._json_content
 
+

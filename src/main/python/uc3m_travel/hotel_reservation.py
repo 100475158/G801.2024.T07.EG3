@@ -117,3 +117,4 @@ class HotelReservation:
         if new_reservation.localizer != my_localizer:
             raise HotelManagementException("Error: reservation has been manipulated")
         return new_reservation
+

@@ -17,3 +17,4 @@ class ReservationJsonStore(JsonStore):
             raise HotelManagementException("This ID card has another reservation")
         super().add_item(item)
 
+

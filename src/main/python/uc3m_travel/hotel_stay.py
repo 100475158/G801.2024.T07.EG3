@@ -87,3 +87,4 @@ class HotelStay():
         my_checkin = HotelStay(idcard=my_id_card, numdays=int(new_reservation.num_days),
                                localizer=my_localizer, roomtype=new_reservation.room_type)
         return my_checkin
+
