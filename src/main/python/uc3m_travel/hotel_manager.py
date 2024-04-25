@@ -78,13 +78,10 @@ class HotelManager:
             #check thawt the roomkey is stored in the checkins file
             file_store = JSON_FILES_PATH + "store_check_in.json"
             #Mirar si es igual al read que ya hay y si no lo extraemos a la clase hija
-            try:
-                with open(file_store, "r", encoding="utf-8", newline="") as file:
-                    room_key_list = json.load(file)
-            except FileNotFoundError as exception:
-                raise HotelManagementException("Error: store checkin not found") from exception
-            except json.JSONDecodeError as exception:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
+
+            checkout1 = JsonStoreCheckout()
+            room_key_list = checkout1.read_input_file(file_store, "Error: store checkin not found")
+
 
             # comprobar que esa room_key es la que me han dado
             #cuando creemos find checkin de la f2 podremos extraerlo

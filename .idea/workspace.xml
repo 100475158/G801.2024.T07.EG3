@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="F">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Ya funcionan todos los test de la f1 y f2">
+      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,26 +37,53 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2erqpOPuI9LDuHLtMTbG7wPUFdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="inlay.hints" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
+    "Python.checkout_json_store.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_checkout_tests.TestDeliverProduct">
+  <component name="RunManager" selected="Python tests.Python tests in test_checkout_tests.py">
+    <configuration name="checkout_json_store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_checkout_tests.TestDeliverProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -65,6 +98,7 @@
     </configuration>
     <configuration name="Python tests for test_guest_arrival_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -79,6 +113,7 @@
     </configuration>
     <configuration name="Python tests for test_room_reservation_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -91,8 +126,9 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_singleton_test.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_checkout_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -101,38 +137,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_singleton_test.MyTestCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_room_reservation_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_room_reservation_tests.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_checkout_tests.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
+        <item itemvalue="Python.checkout_json_store" />
         <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
         <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
         <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
-        <item itemvalue="Python tests.Python tests for test_singleton_test.MyTestCase" />
-        <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -285,63 +307,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714055205624</updated>
     </task>
-    <task id="LOCAL-00021" summary="Ya funcionan todos los test de la f1 y f2, y falla">
-      <created>1714062257706</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1714062257706</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Funccionan los test de la f3">
-      <created>1714066950707</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1714066950707</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Funccionan los test de la f3">
-      <created>1714068308627</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1714068308627</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Funccionan los test de la f3">
-      <created>1714068699876</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1714068699876</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Funccionan los test de la f3">
-      <created>1714068842390</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1714068842391</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Funccionan los test de la f3">
-      <created>1714069595514</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1714069595514</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Funccionan los test de la f3">
-      <created>1714069828441</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1714069828441</updated>
-    </task>
-    <task id="LOCAL-00028" summary="F">
-      <created>1714070202319</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1714070202319</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,12 +315,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Todos los nombres misteriosos refactorizados" />
@@ -363,9 +340,6 @@
     <MESSAGE value="Todos los unitest funcionan" />
     <MESSAGE value="Avances almacenes" />
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2" />
-    <MESSAGE value="Ya funcionan todos los test de la f1 y f2, y falla" />
-    <MESSAGE value="Funccionan los test de la f3" />
-    <MESSAGE value="F" />
-    <option name="LAST_COMMIT_MESSAGE" value="F" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya funcionan todos los test de la f1 y f2" />
   </component>
 </project>
