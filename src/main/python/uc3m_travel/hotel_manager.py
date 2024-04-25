@@ -91,7 +91,6 @@ class HotelManager:
             if datetime.fromtimestamp(departure_date_timestamp).date() != today:
                 raise HotelManagementException("Error: today is not the departure day")
 
-            file_store_checkout = JSON_FILES_PATH + "store_check_out.json"
             my_checkout= JsonStoreCheckout()
             room_key_list=my_checkout.load_store()
 
@@ -104,9 +103,8 @@ class HotelManager:
 
             my_checkout.save_store()
 
-
-
             return True
+
             """file_store_checkout = JSON_FILES_PATH + "store_check_out.json"
             room_key_list = self.read_file(file_store_checkout)
 
