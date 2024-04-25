@@ -154,13 +154,16 @@ class HotelManager:
                 raise HotelManagementException("Error: today is not the departure day")
 
             file_store_checkout = JSON_FILES_PATH + "store_check_out.json"
-            try:
+            my_checkout= JsonStoreCheckout()
+            room_key_list=my_checkout.load_store()
+
+            """try:
                 with open(file_store_checkout, "r", encoding="utf-8", newline="") as file:
                     room_key_list = json.load(file)
             except FileNotFoundError as ex:
                 room_key_list = []
             except json.JSONDecodeError as ex:
-                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex
+                raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex"""
 
             for checkout in room_key_list:
                 if checkout["room_key"] == room_key:

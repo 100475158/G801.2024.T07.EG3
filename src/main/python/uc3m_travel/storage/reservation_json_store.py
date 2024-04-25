@@ -5,8 +5,8 @@ from ..hotel_management_exception import HotelManagementException
 class ReservationJsonStore(JsonStore):
     #class __ReservationJsonStore():
     def __init__(self):
-        _file_name= JSON_FILES_PATH + "store_reservation.json"
-        super().__init__(_file_name)
+        self._file_name= JSON_FILES_PATH + "store_reservation.json"
+        super().__init__(self._file_name)
 
     def add_item(self, item):
         reservation_found = self.find_item("_HotelReservation__localizer", item.localizer)

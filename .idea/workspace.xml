@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Ya funcionan todos los test de la f1 y f2, y falla">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Funccionan los test de la f3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714062257706</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Funccionan los test de la f3">
+      <created>1714066950707</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714066950707</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,6 +326,7 @@
     <MESSAGE value="Avances almacenes" />
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2" />
     <MESSAGE value="Ya funcionan todos los test de la f1 y f2, y falla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ya funcionan todos los test de la f1 y f2, y falla" />
+    <MESSAGE value="Funccionan los test de la f3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Funccionan los test de la f3" />
   </component>
 </project>
