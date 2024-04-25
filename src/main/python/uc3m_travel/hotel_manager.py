@@ -68,7 +68,7 @@ class HotelManager:
                                               room_type=room_type,
                                               arrival=arrival_date,
                                               num_days=num_days)
-            reservation_store= ReservationJsonStore()
+            reservation_store = ReservationJsonStore()
             reservation_store.add_item(my_reservation)
             reservation_store.save_store()
 
