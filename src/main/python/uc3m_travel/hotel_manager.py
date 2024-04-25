@@ -11,8 +11,9 @@ from freezegun import freeze_time
 from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_localizer import Localizer
 from .attribute.attribute_room_key import RoomKey
-"""from .attribute.json_store import JsonStore"""
-from uc3m_travel.storage.reservation_json_store import ReservationJsonStore
+from .storage.reservation_json_store import ReservationJsonStore
+from .storage.json_store import JsonStore
+
 class HotelManager:
     class __HotelManager:
         """Class with all the methods for managing reservations and stays"""
