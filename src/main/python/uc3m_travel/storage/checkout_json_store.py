@@ -17,4 +17,3 @@ class JsonStoreCheckout(JsonStore):
         self.__data_list.append(item)
 
 
-
