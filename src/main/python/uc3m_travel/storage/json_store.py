@@ -27,6 +27,7 @@ class JsonStore():
     def find_item(self, key, value):
         for item in self.__data_list:
             if value == item[key]:
+                print("found", item)
                 return item
         return None
     def load_store(self):

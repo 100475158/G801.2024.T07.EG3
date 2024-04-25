@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Avances almacenes">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Ya funcionan todos los test de la f1 y f2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation">
+  <component name="RunManager" selected="Python tests.Python tests for test_checkout_tests.TestDeliverProduct">
     <configuration name="Python tests for test_checkout_tests.TestDeliverProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,9 +124,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
         <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
         <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
-        <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
         <item itemvalue="Python tests.Python tests for test_singleton_test.MyTestCase" />
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
       </list>
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714049862168</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ya funcionan todos los test de la f1 y f2">
+      <created>1714055205624</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714055205624</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +309,7 @@
     <MESSAGE value="Validaciones terminadas" />
     <MESSAGE value="Todos los unitest funcionan" />
     <MESSAGE value="Avances almacenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avances almacenes" />
+    <MESSAGE value="Ya funcionan todos los test de la f1 y f2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya funcionan todos los test de la f1 y f2" />
   </component>
 </project>

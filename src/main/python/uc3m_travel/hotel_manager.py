@@ -13,6 +13,7 @@ from .attribute.attribute_localizer import Localizer
 from .attribute.attribute_room_key import RoomKey
 from .storage.reservation_json_store import ReservationJsonStore
 from .storage.json_store import JsonStore
+from .storage.checkout_json_store import JsonStoreCheckout
 
 class HotelManager:
     class __HotelManager:
@@ -159,11 +160,13 @@ class HotelManager:
                 if checkout["room_key"] == room_key:
                     raise HotelManagementException("Guest is already out")
 
-            room_checkout={"room_key":  room_key, "checkout_time":datetime.timestamp(datetime.utcnow())}
+            room_checkout = {"room_key":  room_key, "checkout_time":datetime.timestamp(datetime.utcnow())}
 
-            room_key_list.append(room_checkout)
 
-            self.save_store(room_key_list, file_store_checkout)
+            my_co = JsonStoreCheckout()
+            my_co.load_store()
+            my_co.add_item(room_checkout)
+            my_co.save_store()
 
             return True
 
