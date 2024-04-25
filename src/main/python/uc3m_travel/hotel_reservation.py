@@ -14,6 +14,8 @@ from .storage.reservation_json_store import ReservationJsonStore
 from .attribute.attribute_localizer import Localizer
 from .hotel_management_exception import HotelManagementException
 from .storage.json_store import JsonStore
+from .hotel_management_config import JSON_FILES_PATH
+
 class HotelReservation:
     """Class for representing hotel reservations"""
 
@@ -94,7 +96,7 @@ class HotelReservation:
         my_localizer= Localizer(my_localizer).value
         # self.validate_localizer() hay que validar
         # buscar en almacen
-        reservations_store = JsonStore()
+        reservations_store = JsonStore(JSON_FILES_PATH + "store_reservation.json")
         # compruebo si esa reserva esta en el almacen
         reservation = reservations_store.find_item(key="_HotelReservation__localizer",value=my_localizer)
         if reservation ==None:
