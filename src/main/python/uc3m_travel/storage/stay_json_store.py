@@ -8,6 +8,7 @@ class JsonStoreCheckin(JsonStore):
     def __init__(self):
         self._file_name = JSON_FILES_PATH + "store_check_in.json"
         self._data_list=[]
+
     def save_store(self,item):
         found = self.find_item("_HotelStay__room_key", item.room_key)
         self.checkin_exists(found)

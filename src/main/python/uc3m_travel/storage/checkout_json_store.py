@@ -9,6 +9,16 @@ class JsonStoreCheckout(JsonStore):
         self._file_name = JSON_FILES_PATH + "store_check_out.json"
         self._data_list=[]
 
+    def add_item(self, item):
+        self.find_item_checkout(item["room_key"])
+        self._data_list.append(item)
+
+    def save_store(self,item):
+        self.load_store()
+
+        self.add_item(item)
+        super().save_store()
+
     def find_item_checkout(self, value):
         print(self._file_name)
         found = self.find_item("room_key", value)

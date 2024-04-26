@@ -60,22 +60,21 @@ class HotelManager:
 
         def guest_checkout(self, room_key:str)->bool:
             """manages the checkout of a guest"""
-            room_key= RoomKey(room_key).value
+            room_key = RoomKey(room_key).value
             #check thawt the roomkey is stored in the checkins file
             file_store = JSON_FILES_PATH + "store_check_in.json"
-            #Mirar si es igual al read que ya hay y si no lo extraemos a la clase hija
             my_checkout = JsonStoreCheckout()
             room_key_list_1 = my_checkout.read_input_file(file_store, "Error: store checkin not found")
+
             # comprobar que esa room_key es la que me han dado
             #cuando creemos find checkin de la f2 podremos extraerlo
             checkin1 = JsonStoreCheckin()
             departure_date_timestamp = checkin1.validate_room_key(room_key, room_key_list_1)
+
             my_checkout.validate_date_checkout(departure_date_timestamp)
-            room_key_list=my_checkout.load_store()
-            my_checkout.find_item_checkout(room_key)
+
             room_checkout = {"room_key": room_key, "checkout_time": datetime.timestamp(datetime.utcnow())}
-            room_key_list.append(room_checkout)
-            my_checkout.save_store()
+            my_checkout.save_store(room_checkout)
 
             return True
 
