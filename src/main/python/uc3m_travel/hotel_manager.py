@@ -48,26 +48,15 @@ class HotelManager:
         def guest_arrival(self, file_input:str)->str:
             """manages the arrival of a guest with a reservation"""
             my_checkin = HotelStay.create_guest_arrival_from_file(file_input)
-
             #Ahora lo guardo en el almacen nuevo de checkin
             # escribo el fichero Json con todos los datos
-
             my_store_checkin= JsonStoreCheckin()
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
             my_store_checkin.load_store()
-
             # comprobar que no he hecho otro ckeckin antes
-            item = my_store_checkin.find_item("_HotelStay__room_key", my_checkin.room_key)
-            my_store_checkin.checkin_exists(item)
-
-            #añado los datos de mi reserva a la lista , a lo que hubiera
-            my_store_checkin.add_item(my_checkin)
-
-            my_store_checkin.save_store()
+            my_store_checkin.save_store(my_checkin)
 
             return my_checkin.room_key
-
-
 
         def guest_checkout(self, room_key:str)->bool:
             """manages the checkout of a guest"""
@@ -75,28 +64,23 @@ class HotelManager:
             #check thawt the roomkey is stored in the checkins file
             file_store = JSON_FILES_PATH + "store_check_in.json"
             #Mirar si es igual al read que ya hay y si no lo extraemos a la clase hija
-
-            my_checkout= JsonStoreCheckout()
+            my_checkout = JsonStoreCheckout()
             room_key_list_1 = my_checkout.read_input_file(file_store, "Error: store checkin not found")
-
             # comprobar que esa room_key es la que me han dado
             #cuando creemos find checkin de la f2 podremos extraerlo
             checkin1 = JsonStoreCheckin()
             departure_date_timestamp = checkin1.validate_room_key(room_key, room_key_list_1)
-
             my_checkout.validate_date_checkout(departure_date_timestamp)
-
             room_key_list=my_checkout.load_store()
-
             my_checkout.find_item_checkout(room_key)
-
             room_checkout = {"room_key": room_key, "checkout_time": datetime.timestamp(datetime.utcnow())}
-
             room_key_list.append(room_checkout)
-
             my_checkout.save_store()
 
             return True
+
+
+
 
 
     __instance = None

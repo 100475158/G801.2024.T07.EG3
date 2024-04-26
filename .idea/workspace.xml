@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="refactorizado validacion de fecha de salida. Funcionan todos los tests">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb">
+      <change beforePath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/G801.2024.T07.EG3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_departure.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" afterDir="false" />
     </list>
@@ -36,58 +39,48 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
   <component name="ProjectId" id="2erqpOPuI9LDuHLtMTbG7wPUFdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
-    "Python tests.Python tests in test_guest_arrival_tests.py.executor": "Run",
-    "Python tests.Python tests in test_room_reservation_tests.py.executor": "Run",
-    "Python tests.Python tests in test_singleton_test.py.executor": "Run",
-    "Python.checkout_json_store.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "last_opened_file_path": "/Users/alvaromorenomartin/PycharmProjects/G801.2024.T07.EG3/src/main/python/uc3m_travel/parser"
-  }
-}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/python/uc3m_travel/parser" />
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_guest_arrival_tests.py">
-    <configuration name="checkout_json_store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation">
+    <configuration name="Python tests for test_checkout_tests.TestDeliverProduct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/checkout_json_store.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_checkout_tests.TestDeliverProduct&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_guest_arrival_tests.TestHotelReservation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_guest_arrival_tests.TestHotelReservation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_checkout_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -102,7 +95,6 @@
     </configuration>
     <configuration name="Python tests in test_guest_arrival_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -117,7 +109,6 @@
     </configuration>
     <configuration name="Python tests in test_room_reservation_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -130,28 +121,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_singleton_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_singleton_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
+        <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
         <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
-        <item itemvalue="Python.checkout_json_store" />
-        <item itemvalue="Python tests.Python tests in test_singleton_test.py" />
+        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
+        <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -335,31 +311,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714075831813</updated>
     </task>
-    <task id="LOCAL-00024" summary="Quito una variable file_store que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb">
-      <option name="closed" value="true" />
-      <created>1714076230626</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1714076230626</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Json parser creado">
-      <option name="closed" value="true" />
-      <created>1714122040165</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1714122040165</updated>
-    </task>
-    <task id="LOCAL-00026" summary="refactorizado validacion de fecha de salida. Funcionan todos los tests">
-      <option name="closed" value="true" />
-      <created>1714122333319</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1714122333319</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,6 +336,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Todos los nombres misteriosos refactorizados" />
@@ -395,9 +348,6 @@
     <MESSAGE value="Refactorizo en hotel manager para leer archivo y crear room_key_list. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
-    <MESSAGE value="Quito una variable file_store que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
-    <MESSAGE value="Json parser creado" />
-    <MESSAGE value="refactorizado validacion de fecha de salida. Funcionan todos los tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorizado validacion de fecha de salida. Funcionan todos los tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
   </component>
 </project>
