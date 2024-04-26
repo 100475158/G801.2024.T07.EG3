@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Refactorizado varios metodos">
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Json Parser hecho">
       <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +88,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_singleton_test.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="G801.2024.T07.EG3" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_singleton_test.MyTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests in test_checkout_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,27 +116,13 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in test_guest_arrival_tests.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="G801.2024.T07.EG3" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/unittest/python" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/unittest/python/test_guest_arrival_tests.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_checkout_tests.TestDeliverProduct" />
         <item itemvalue="Python tests.Python tests for test_guest_arrival_tests.TestHotelReservation" />
         <item itemvalue="Python tests.Python tests for test_room_reservation_tests.TestHotelReservation" />
+        <item itemvalue="Python tests.Python tests for test_singleton_test.MyTestCase" />
         <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
-        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
       </list>
     </recent_temporary>
   </component>
