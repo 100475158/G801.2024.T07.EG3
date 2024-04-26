@@ -22,7 +22,7 @@ class JsonParser():
     def load_json_content(self):
         """Loads the content of the json file in a dictionary"""
         try:
-            with open(self._input_file, "p", encoding="utf-8", newline="") as file:
+            with open(self._input_file, "r", encoding="utf-8", newline="") as file:
                 data = json.load(file)
 
         except FileNotFoundError as ex:

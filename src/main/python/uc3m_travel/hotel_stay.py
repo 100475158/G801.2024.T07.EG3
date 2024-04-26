@@ -8,6 +8,7 @@ from .hotel_management_exception import HotelManagementException
 from .hotel_reservation import HotelReservation
 from .storage.json_store import JsonStore
 from .hotel_management_config import JSON_FILES_PATH
+from .parser.arrival_parser import ArrivalParser
 class HotelStay():
     """Class for representing hotel stays"""
     def __init__(self,
@@ -73,10 +74,13 @@ class HotelStay():
 
     @staticmethod
     def create_guest_arrival_from_file(file_input):
-        my_stay = JsonStore(JSON_FILES_PATH +  "store_check_in.json")
-        input_list = my_stay.read_input_file(file_input,"Error: file input not found")
+        """my_stay = JsonStore(JSON_FILES_PATH +  "store_check_in.json")
+        input_list = my_stay.read_input_file(file_input,"Error: file input not found")"""
         # comprobar valores del fichero
-        my_id_card, my_localizer = my_stay.read_input_data_from_file(input_list)
+        """ my_id_card, my_localizer = my_stay.read_input_data_from_file(input_list)"""
+        arrival_create= ArrivalParser(file_input)
+        my_id_card= arrival_create.json_content["IdCard"]
+        my_localizer= arrival_create.json_content["Localizer"]
         new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
         # compruebo si hoy es la fecha de checkin
         reservation_format = "%d/%m/%Y"
