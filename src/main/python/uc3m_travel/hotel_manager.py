@@ -56,8 +56,7 @@ class HotelManager:
             file_store = JSON_FILES_PATH + "store_check_in.json"
             my_checkout = JsonStoreCheckout()
             room_key_list_1 = my_checkout.read_input_file(file_store, "Error: store checkin not found")
-            # comprobar que esa room_key es la que me han dado
-            # cuando creemos find checkin de la f2 podremos extraerlo
+
             checkin1 = JsonStoreCheckin()
             departure_date_timestamp = checkin1.validate_room_key(room_key, room_key_list_1)
 

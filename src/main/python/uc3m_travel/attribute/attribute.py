@@ -6,7 +6,7 @@ class Attribute:
     """Parent class for attributes..."""
 
     def __init__(self):
-        """"Constructor for attributes..."""
+        """Constructor for attributes..."""
         self._attr_pattern = r""
         self._error_message = ""
         self._attr_value = ""

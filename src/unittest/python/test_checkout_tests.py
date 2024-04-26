@@ -12,29 +12,29 @@ from uc3m_travel import JSON_FILES_GUEST_ARRIVAL
 
 class TestDeliverProduct(TestCase):
     """Class for testing guest_checkout"""
+
     @freeze_time("2023-03-08")
     def setUp(self):
         """first prepare the stores"""
         store_reservation = JSON_FILES_PATH + "store_reservation.json"
         store_checkin = JSON_FILES_PATH + "store_check_in.json"
-        file_store_ckeck_out = JSON_FILES_PATH + "store_check_out.json"
-
+        file_store_check_out = JSON_FILES_PATH + "store_check_out.json"
 
         if os.path.isfile(store_reservation):
             os.remove(store_reservation)
         if os.path.isfile(store_checkin):
             os.remove(store_checkin)
-        if os.path.isfile(file_store_ckeck_out):
-            os.remove(file_store_ckeck_out)
+        if os.path.isfile(file_store_check_out):
+            os.remove(file_store_check_out)
 
-        #add orders and shipping info in the stores
+        # add orders and shipping info in the stores
         my_manager = HotelManager()
         # add an order in the store
         file_test = JSON_FILES_GUEST_ARRIVAL + "key_ok.json"
-        ##insert the reservation
+        # insert the reservation
         with freeze_time("2024/03/22 13:00:00"):
             my_manager = HotelManager()
-            #first reservation for valid
+            # first reservation for valid
             localizer = my_manager.room_reservation(credit_card="5105105105105100",
                                                     name_surname="JOSE LOPEZ",
                                                     id_card="12345678Z",
@@ -45,8 +45,6 @@ class TestDeliverProduct(TestCase):
             self.assertEqual(localizer, "450a53be9b39944e62e7164ca5f5aadf")
         with freeze_time("2024/07/01 13:00:00"):
             my_manager.guest_arrival(file_test)
-
-
 
     @freeze_time("2024-07-02")
     def test_checkout_ok(self):
@@ -85,7 +83,6 @@ class TestDeliverProduct(TestCase):
         else:
             hash_original = ""
 
-
         with self.assertRaises(HotelManagementException) as context_manager:
             my_manager.guest_checkout(
                 "4f57880d4240350db9b276c84edaacc923a63906a408cc8da2b52c49213d3859")
@@ -99,6 +96,7 @@ class TestDeliverProduct(TestCase):
             hash_new = ""
 
         self.assertEqual(hash_new, hash_original)
+
     @freeze_time("2024-07-04")
     def test_guest_checkout_no_date(self):
         """path tracking_code is found , and date is not today"""
@@ -196,9 +194,9 @@ class TestDeliverProduct(TestCase):
     @freeze_time("2023-03-18")
     def test_guest_checkout_store_check_in_is_empty(self):
         """for testing: store_check_in is empty"""
-        #write a store_check_in empty
+        # write a store_check_in empty
         file_store_check_in = JSON_FILES_PATH + "store_check_in.json"
-        data_list=[]
+        data_list = []
         with open(file_store_check_in, "w", encoding="utf-8", newline="") as file:
             json.dump(data_list, file, indent=2)
 

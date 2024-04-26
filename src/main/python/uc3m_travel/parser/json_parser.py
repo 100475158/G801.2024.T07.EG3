@@ -2,8 +2,8 @@ from ..hotel_management_exception import HotelManagementException
 import json
 
 
-class JsonParser():
-    """Subclase de JsonStore"""
+class JsonParser:
+    """Subclass de JsonStore"""
     _JSON_KEYS = []
     _ERROR_MESSAGES = "JSON Decode Error - Wrong JSON Format"
     _json_content = None
@@ -33,5 +33,5 @@ class JsonParser():
 
     @property
     def json_content(self):
-        """Returns a dictinary with content"""
+        """Returns a dictionary with content"""
         return self._json_content

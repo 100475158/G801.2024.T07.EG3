@@ -7,28 +7,28 @@ from uc3m_travel.storage.checkout_json_store import JsonStoreCheckout
 
 class MyTestCase(unittest.TestCase):
     def test_singleton(self):
-        mi_primera_instancia = HotelManager()
-        mi_segunda_instancia = HotelManager()
+        first_instance = HotelManager()
+        second_instance = HotelManager()
 
-        self.assertEqual(mi_primera_instancia, mi_segunda_instancia)  # add assertion here
+        self.assertEqual(first_instance, second_instance)  # add assertion here
 
     def test_singleton2(self):
-        mi_primera_instancia = ReservationJsonStore()
-        mi_segunda_instancia = ReservationJsonStore()
+        first_instance = ReservationJsonStore()
+        second_instance = ReservationJsonStore()
 
-        self.assertEqual(mi_primera_instancia, mi_segunda_instancia)
+        self.assertEqual(first_instance, second_instance)
 
     def test_singleton3(self):
-        mi_primera_instancia = JsonStoreCheckin()
-        mi_segunda_instancia = JsonStoreCheckin()
+        first_instance = JsonStoreCheckin()
+        second_instance = JsonStoreCheckin()
 
-        self.assertEqual(mi_primera_instancia, mi_segunda_instancia)  # add assertion here
+        self.assertEqual(first_instance, second_instance)  # add assertion here
 
     def test_singleton4(self):
-        mi_primera_instancia = JsonStoreCheckout()
-        mi_segunda_instancia = JsonStoreCheckout()
+        first_instance = JsonStoreCheckout()
+        second_instance = JsonStoreCheckout()
 
-        self.assertEqual(mi_primera_instancia, mi_segunda_instancia)
+        self.assertEqual(first_instance, second_instance)
 
 
 if __name__ == '__main__':

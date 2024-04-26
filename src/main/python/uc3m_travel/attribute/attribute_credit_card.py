@@ -5,6 +5,7 @@ from ..hotel_management_exception import HotelManagementException
 class CreditCard(Attribute):
 
     def __init__(self, credit_card):
+        super().__init__()
         self._attr_pattern = r'^[0-9]{16}'
         self._error_message = "Invalid credit card format"
         self._attr_value = self._validate(credit_card)

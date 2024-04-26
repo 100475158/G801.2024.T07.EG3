@@ -5,6 +5,7 @@ from ..hotel_management_exception import HotelManagementException
 class NumDays(Attribute):
 
     def __init__(self, attr_value):
+        super().__init__()
         self._attr_pattern = r""
         self._error_message = ""
         self._attr_value = self._validate(attr_value)

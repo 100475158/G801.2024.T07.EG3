@@ -23,7 +23,7 @@ class HotelStay:
         self.__type = roomtype
         justnow = datetime.utcnow()
         self.__arrival = datetime.timestamp(justnow)
-        # timestamp is represented in seconds.miliseconds
+        # timestamp is represented in seconds.milliseconds
         # to add the number of days we must express num_days in seconds
         self.__departure = self.__arrival + (numdays * 24 * 60 * 60)
         self.__room_key = hashlib.sha256(self.__signature_string().encode()).hexdigest()
