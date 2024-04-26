@@ -2,16 +2,7 @@ from ..hotel_management_exception import HotelManagementException
 import json
 
 
-def read_input_data_from_file(input_list):
-    try:
-        my_localizer = input_list["Localizer"]
-        my_id_card = input_list["IdCard"]
-    except KeyError as exception:
-        raise HotelManagementException("Error - Invalid Key in JSON") from exception
-    return my_id_card, my_localizer
-
-
-class JsonStore():
+class JsonStore:
 
     def __init__(self, file_name):
         self._file_name = file_name
@@ -45,7 +36,8 @@ class JsonStore():
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
         return self._data_list
 
-    def read_input_file(self, file_input, error):
+    @staticmethod
+    def read_input_file(file_input, error):
         try:
             with open(file_input, "r", encoding="utf-8", newline="") as file:
                 input_list = json.load(file)
@@ -54,3 +46,12 @@ class JsonStore():
         except json.JSONDecodeError as exception:
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
         return input_list
+
+    @property
+    def read_input_data_from_file(input_list):
+        try:
+            my_localizer = input_list["Localizer"]
+            my_id_card = input_list["IdCard"]
+        except KeyError as exception:
+            raise HotelManagementException("Error - Invalid Key in JSON") from exception
+        return my_id_card, my_localizer

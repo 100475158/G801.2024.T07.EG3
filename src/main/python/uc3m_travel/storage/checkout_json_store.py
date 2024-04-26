@@ -26,7 +26,8 @@ class JsonStoreCheckout(JsonStore):
             if found is not None:
                 raise HotelManagementException("Guest is already out")
 
-        def validate_date_checkout(self, departure_date_timestamp):
+        @staticmethod
+        def validate_date_checkout(departure_date_timestamp):
             today = datetime.utcnow().date()
             if datetime.fromtimestamp(departure_date_timestamp).date() != today:
                 raise HotelManagementException("Error: today is not the departure day")

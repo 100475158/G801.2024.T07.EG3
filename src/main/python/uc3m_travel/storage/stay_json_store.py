@@ -28,7 +28,7 @@ class JsonStoreCheckin(JsonStore):
 
         @staticmethod
         def checkin_exists(item):
-            if item != None:
+            if item is not None:
                 raise HotelManagementException("ckeckin  ya realizado")
 
     __instance = None
