@@ -6,9 +6,10 @@ class ReservationJsonStore(JsonStore):
     #class __ReservationJsonStore():
     def __init__(self):
         self._file_name= JSON_FILES_PATH + "store_reservation.json"
-        super().__init__(self._file_name)
-
+        """super().__init__(self._file_name)"""
+        self._data_list= []
     def add_item(self, item):
+        self.load_store()
         reservation_found = self.find_item("_HotelReservation__localizer", item.localizer)
         if reservation_found:
             raise HotelManagementException("Reservation already exists")
