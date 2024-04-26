@@ -86,12 +86,11 @@ class HotelManager:
             checkin1 = JsonStoreCheckin()
             departure_date_timestamp = checkin1.validate_room_key(room_key, room_key_list)
 
-            today = datetime.utcnow().date()
-            if datetime.fromtimestamp(departure_date_timestamp).date() != today:
-                raise HotelManagementException("Error: today is not the departure day")
-
             my_checkout= JsonStoreCheckout()
+            my_checkout.validate_date_checkout(departure_date_timestamp)
+
             room_key_list=my_checkout.load_store()
+
 
             my_checkout.find_item_checkout(room_key)
 
