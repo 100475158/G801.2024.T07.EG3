@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Json Parser hecho">
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/reservation_json_store.py" afterDir="false" />
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Singleton hecho">
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_stay.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714131245952</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Singleton hecho">
+      <created>1714143845917</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714143845917</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +358,7 @@
     <MESSAGE value="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Refactorizado varios metodos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactorizado varios metodos" />
+    <MESSAGE value="Singleton hecho" />
+    <option name="LAST_COMMIT_MESSAGE" value="Singleton hecho" />
   </component>
 </project>
