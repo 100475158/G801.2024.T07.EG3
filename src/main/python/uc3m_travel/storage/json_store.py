@@ -85,7 +85,7 @@ class JsonStore():
         return room_key_list"""
 
 
-class JsonParser():
+'''class JsonParser():
     """Subclase de JsonStore"""
     _JSON_KEYS = []
     _ERROR_MESSAGES = "JSON Decode Error - Wrong JSON Format"
@@ -106,6 +106,6 @@ class JsonParser():
     @property
     def json_content(self):
         """Returns a dictinary with content"""
-        return self._json_content
+        return self._json_content'''
 
 
