@@ -53,7 +53,6 @@ class HotelManager:
             # escribo el fichero Json con todos los datos
 
             my_store_checkin= JsonStoreCheckin()
-
             # leo los datos del fichero si existe , y si no existe creo una lista vacia
             my_store_checkin.load_store()
 
