@@ -18,3 +18,7 @@ class JsonStoreCheckin(JsonStore):
         if not found:
             raise HotelManagementException("Error: room key not found")
         return departure_date_timestamp
+
+    def checkin_exists(self, item):
+        if item != None:
+            raise HotelManagementException("ckeckin  ya realizado")

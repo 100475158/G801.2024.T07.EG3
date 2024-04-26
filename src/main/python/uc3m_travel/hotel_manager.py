@@ -59,8 +59,7 @@ class HotelManager:
 
             # comprobar que no he hecho otro ckeckin antes
             item = my_store_checkin.find_item("_HotelStay__room_key", my_checkin.room_key)
-            if item != None:
-                raise HotelManagementException ("ckeckin  ya realizado")
+            my_store_checkin.checkin_exists(item)
 
             #añado los datos de mi reserva a la lista , a lo que hubiera
             my_store_checkin.add_item(my_checkin)

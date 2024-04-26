@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="Quito una variable file_store que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb">
-      <change afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_parser.py" afterDir="false" />
+    <list default="true" id="fa5a377a-e0b7-4c41-8059-3309e25a4026" name="Changes" comment="refactorizado validacion de fecha de salida. Funcionan todos los tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/json_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/hotel_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/uc3m_travel/storage/stay_json_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,22 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in test_checkout_tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_guest_arrival_tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_room_reservation_tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_singleton_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.checkout_json_store.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in test_checkout_tests.py.executor": "Run",
+    "Python tests.Python tests in test_guest_arrival_tests.py.executor": "Run",
+    "Python tests.Python tests in test_room_reservation_tests.py.executor": "Run",
+    "Python tests.Python tests in test_singleton_test.py.executor": "Run",
+    "Python.checkout_json_store.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "last_opened_file_path": "/Users/alvaromorenomartin/PycharmProjects/G801.2024.T07.EG3/src/main/python/uc3m_travel/parser"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/python/uc3m_travel/parser" />
       <recent name="C:\Users\Miguel\PycharmProjects\G801.2024.T07.EG3" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_checkout_tests.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_guest_arrival_tests.py">
     <configuration name="checkout_json_store" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="G801.2024.T07.EG3" />
       <option name="ENV_FILES" value="" />
@@ -145,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
         <item itemvalue="Python tests.Python tests in test_checkout_tests.py" />
         <item itemvalue="Python.checkout_json_store" />
         <item itemvalue="Python tests.Python tests in test_singleton_test.py" />
         <item itemvalue="Python tests.Python tests in test_room_reservation_tests.py" />
-        <item itemvalue="Python tests.Python tests in test_guest_arrival_tests.py" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +343,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714076230626</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Json parser creado">
+      <option name="closed" value="true" />
+      <created>1714122040165</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714122040165</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactorizado validacion de fecha de salida. Funcionan todos los tests">
+      <option name="closed" value="true" />
+      <created>1714122333319</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1714122333319</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,6 +396,8 @@
     <MESSAGE value="Refactorizo en hotel manager para validar la room_key. Hago extract method creando la funcion validate_room_key, y la meto en el archivo stay_json_store. La llamo desde hotel manager. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Quito variable que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
     <MESSAGE value="Quito una variable file_store que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quito una variable file_store que no esta siendo usada de hotel manager. Funcionan todos los tests y el pyb" />
+    <MESSAGE value="Json parser creado" />
+    <MESSAGE value="refactorizado validacion de fecha de salida. Funcionan todos los tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactorizado validacion de fecha de salida. Funcionan todos los tests" />
   </component>
 </project>
