@@ -89,9 +89,7 @@ class HotelManager:
 
             room_key_list=my_checkout.load_store()
 
-
             my_checkout.find_item_checkout(room_key)
-
 
             room_checkout = {"room_key": room_key, "checkout_time": datetime.timestamp(datetime.utcnow())}
 
@@ -100,22 +98,6 @@ class HotelManager:
             my_checkout.save_store()
 
             return True
-
-            """file_store_checkout = JSON_FILES_PATH + "store_check_out.json"
-            room_key_list = self.read_file(file_store_checkout)
-
-            for checkout in room_key_list:
-                if checkout["room_key"] == room_key:
-                    raise HotelManagementException("Guest is already out")
-
-            room_checkout = {"room_key":  room_key, "checkout_time":datetime.timestamp(datetime.utcnow())}
-
-
-            my_co = JsonStoreCheckout()
-            my_co.load_store()
-            my_co.add_item(room_checkout)
-            my_co.save_store()"""
-
 
 
     __instance = None
