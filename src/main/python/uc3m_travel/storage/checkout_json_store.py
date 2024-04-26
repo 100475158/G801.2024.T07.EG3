@@ -1,20 +1,20 @@
 from datetime import datetime
-
 from .json_store import JsonStore
 from ..hotel_management_config import JSON_FILES_PATH
 from ..hotel_management_exception import HotelManagementException
+
 
 class JsonStoreCheckout(JsonStore):
     class __JsonStoreCheckout(JsonStore):
         def __init__(self):
             self._file_name = JSON_FILES_PATH + "store_check_out.json"
-            self._data_list=[]
+            self._data_list = []
 
         def add_item(self, item):
             self.find_item_checkout(item["room_key"])
             self._data_list.append(item)
 
-        def save_store(self,item):
+        def save_store(self, item):
             self.load_store()
 
             self.add_item(item)

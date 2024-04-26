@@ -1,21 +1,21 @@
-''' Class HotelStay (GE2.2) '''
+""" Class HotelStay (GE2.2) """
 from datetime import datetime
 import hashlib
 from .attribute.attribute_id_card import IdCard
-from .attribute.attribute_room_type import RoomType
 from .attribute.attribute_localizer import Localizer
 from .hotel_management_exception import HotelManagementException
 from .hotel_reservation import HotelReservation
-from .storage.json_store import JsonStore
-from .hotel_management_config import JSON_FILES_PATH
 from .parser.arrival_parser import ArrivalParser
-class HotelStay():
+
+
+class HotelStay:
     """Class for representing hotel stays"""
+
     def __init__(self,
-                 idcard:str,
-                 localizer:str,
-                 numdays:int,
-                 roomtype:str):#se supone q hay q eliminar esos num_days y roomtype
+                 idcard: str,
+                 localizer: str,
+                 numdays: int,
+                 roomtype: str):
         """constructor for HotelStay objects"""
         self.__alg = "SHA-256"
         self.__idcard = IdCard(idcard).value
@@ -23,8 +23,8 @@ class HotelStay():
         self.__type = roomtype
         justnow = datetime.utcnow()
         self.__arrival = datetime.timestamp(justnow)
-        #timestamp is represented in seconds.miliseconds
-        #to add the number of days we must express num_days in seconds
+        # timestamp is represented in seconds.miliseconds
+        # to add the number of days we must express num_days in seconds
         self.__departure = self.__arrival + (numdays * 24 * 60 * 60)
         self.__room_key = hashlib.sha256(self.__signature_string().encode()).hexdigest()
 
@@ -74,18 +74,16 @@ class HotelStay():
 
     @staticmethod
     def create_guest_arrival_from_file(file_input):
-        # comprobar valores del fichero
-        arrival_create= ArrivalParser(file_input)
-        my_id_card= arrival_create.json_content["IdCard"]
-        my_localizer= arrival_create.json_content["Localizer"]
+        arrival_create = ArrivalParser(file_input)
+        my_id_card = arrival_create.json_content["IdCard"]
+        my_localizer = arrival_create.json_content["Localizer"]
         new_reservation = HotelReservation.create_reservation_from_arrival(my_id_card, my_localizer)
-        # compruebo si hoy es la fecha de checkin
+
         reservation_format = "%d/%m/%Y"
         date_obj = datetime.strptime(new_reservation.arrival, reservation_format)
         if date_obj.date() != datetime.date(datetime.utcnow()):
             raise HotelManagementException("Error: today is not reservation date")
-        # genero la room key para ello llamo a Hotel Stay
+
         my_checkin = HotelStay(idcard=my_id_card, numdays=int(new_reservation.num_days),
                                localizer=my_localizer, roomtype=new_reservation.room_type)
         return my_checkin
-

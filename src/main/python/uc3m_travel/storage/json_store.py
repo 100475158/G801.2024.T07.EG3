@@ -1,16 +1,22 @@
-import hashlib
 from ..hotel_management_exception import HotelManagementException
 import json
-from ..hotel_management_config import JSON_FILES_PATH
+
+
+def read_input_data_from_file(input_list):
+    try:
+        my_localizer = input_list["Localizer"]
+        my_id_card = input_list["IdCard"]
+    except KeyError as exception:
+        raise HotelManagementException("Error - Invalid Key in JSON") from exception
+    return my_id_card, my_localizer
+
 
 class JsonStore():
 
-
     def __init__(self, file_name):
-        self._file_name =file_name
-        self._data_list=[]
+        self._file_name = file_name
+        self._data_list = []
         self.load_store()
-
 
     def save_store(self):
         try:
@@ -18,7 +24,6 @@ class JsonStore():
                 json.dump(self._data_list, file, indent=2)
         except FileNotFoundError as exception:
             raise HotelManagementException("Wrong file  or file path") from exception
-
 
     def add_item(self, item):
         self._data_list.append(item.__dict__)
@@ -29,6 +34,7 @@ class JsonStore():
                 print("found", item)
                 return item
         return None
+
     def load_store(self):
         try:
             with open(self._file_name, "r", encoding="utf-8", newline="") as file:
@@ -39,7 +45,6 @@ class JsonStore():
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
         return self._data_list
 
-
     def read_input_file(self, file_input, error):
         try:
             with open(file_input, "r", encoding="utf-8", newline="") as file:
@@ -49,17 +54,3 @@ class JsonStore():
         except json.JSONDecodeError as exception:
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from exception
         return input_list
-
-    def read_input_data_from_file(self, input_list):
-        try:
-            my_localizer = input_list["Localizer"]
-            my_id_card = input_list["IdCard"]
-        except KeyError as exception:
-            raise HotelManagementException("Error - Invalid Key in JSON") from exception
-        return my_id_card, my_localizer
-
-
-
-
-
-

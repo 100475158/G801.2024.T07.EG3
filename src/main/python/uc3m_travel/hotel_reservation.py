@@ -1,6 +1,5 @@
 """Hotel reservation class"""
 import hashlib
-import json
 from datetime import datetime
 from .attribute.attribute_id_card import IdCard
 from .attribute.attribute_name_surname import NameSurname
@@ -10,24 +9,24 @@ from .attribute.attribute_room_type import RoomType
 from .attribute.attribute_num_days import NumDays
 from .attribute.attribute_credit_card import CreditCard
 from freezegun import freeze_time
-from .storage.reservation_json_store import ReservationJsonStore
 from .attribute.attribute_localizer import Localizer
 from .hotel_management_exception import HotelManagementException
 from .storage.json_store import JsonStore
 from .hotel_management_config import JSON_FILES_PATH
 
+
 class HotelReservation:
     """Class for representing hotel reservations"""
 
-    #pylint: disable=too-many-arguments, too-many-instance-attributes
+    # pylint: disable=too-many-arguments, too-many-instance-attributes
     def __init__(self,
-                 id_card:str,
-                 credit_card_number:str,
-                 name_surname:str,
-                 phone_number:str,
-                 room_type:str,
-                 arrival:str,
-                 num_days:int):
+                 id_card: str,
+                 credit_card_number: str,
+                 name_surname: str,
+                 phone_number: str,
+                 room_type: str,
+                 arrival: str,
+                 num_days: int):
         """constructor of reservation objects"""
         self.__credit_card_number = CreditCard(credit_card_number).value
         self.__id_card = IdCard(id_card).value
@@ -42,7 +41,7 @@ class HotelReservation:
 
     def __str__(self):
         """return a json string with the elements required to calculate the localizer"""
-        #VERY IMPORTANT: JSON KEYS CANNOT BE RENAMED
+        # VERY IMPORTANT: JSON KEYS CANNOT BE RENAMED
         json_info = {"id_card": self.__id_card,
                      "name_surname": self.__name_surname,
                      "credit_card": self.__credit_card_number,
@@ -53,10 +52,12 @@ class HotelReservation:
                      "room_type": self.__room_type,
                      }
         return "HotelReservation:" + json_info.__str__()
+
     @property
     def credit_card(self):
         """property for getting and setting the credit_card number"""
         return self.__credit_card_number
+
     @credit_card.setter
     def credit_card(self, value):
         self.__credit_card_number = value
@@ -65,10 +66,10 @@ class HotelReservation:
     def id_card(self):
         """property for getting and setting the id_card"""
         return self.__id_card
+
     @id_card.setter
     def id_card(self, value):
         self.__id_card = value
-
 
     @property
     def localizer(self):
@@ -92,18 +93,16 @@ class HotelReservation:
 
     @classmethod
     def create_reservation_from_arrival(cls, my_id_card, my_localizer):
-        my_id_card= IdCard(my_id_card).value
-        my_localizer= Localizer(my_localizer).value
-        # self.validate_localizer() hay que validar
-        # buscar en almacen
+        my_id_card = IdCard(my_id_card).value
+        my_localizer = Localizer(my_localizer).value
+
         reservations_store = JsonStore(JSON_FILES_PATH + "store_reservation.json")
-        # compruebo si esa reserva esta en el almacen
-        reservation = reservations_store.find_item(key="_HotelReservation__localizer",value=my_localizer)
-        if reservation ==None:
+        reservation = reservations_store.find_item(key="_HotelReservation__localizer", value=my_localizer)
+        if reservation is None:
             raise HotelManagementException("Error: localizer not found")
         if my_id_card != reservation["_HotelReservation__id_card"]:
             raise HotelManagementException("Error: Localizer is not correct for this IdCard")
-        # regenerar clave y ver si coincide
+
         reservation_date = datetime.fromtimestamp(reservation["_HotelReservation__reservation_date"])
         with freeze_time(reservation_date):
             new_reservation = HotelReservation(
@@ -117,4 +116,3 @@ class HotelReservation:
         if new_reservation.localizer != my_localizer:
             raise HotelManagementException("Error: reservation has been manipulated")
         return new_reservation
-

@@ -26,7 +26,6 @@ class JsonParser():
                 data = json.load(file)
 
         except FileNotFoundError as ex:
-        # file is not found
             raise HotelManagementException("File is not found") from ex
         except json.JSONDecodeError as ex:
             raise HotelManagementException("JSON Decode Error - Wrong JSON Format") from ex

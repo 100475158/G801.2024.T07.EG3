@@ -22,11 +22,10 @@ class TestHotelReservation(TestCase):
         if os.path.exists(my_file):
             remove(my_file)
 
-
     @staticmethod
     def read_file():
         """ this method read a Json file and return the value """
-        my_file= JSON_FILES_PATH + "store_reservation.json"
+        my_file = JSON_FILES_PATH + "store_reservation.json"
         try:
             with open(my_file, "r", encoding="utf-8", newline="") as file:
                 data = json.load(file)
@@ -48,14 +47,14 @@ class TestHotelReservation(TestCase):
         days = 1
         phone_number = "+341234567"
 
-        #first reservation
+        # first reservation
         my_manager.room_reservation(credit_card=credit_card_number,
-                                      name_surname=name,
-                                      id_card=dni,
-                                      phone_number=phone_number,
-                                      room_type=room_type,
-                                      arrival_date=arrival,
-                                      num_days=days)
+                                    name_surname=name,
+                                    id_card=dni,
+                                    phone_number=phone_number,
+                                    room_type=room_type,
+                                    arrival_date=arrival,
+                                    num_days=days)
 
         # we calculater the files signature before calling the second method
         reservations_file = JSON_FILES_PATH + "store_reservation.json"
@@ -64,15 +63,15 @@ class TestHotelReservation(TestCase):
                 hash_original = hashlib.md5(str(file_org).encode()).hexdigest()
         else:
             hash_original = ""
-        #second reservation with same data
+        # second reservation with same data
         with self.assertRaises(HotelManagementException) as exception_context:
             my_manager.room_reservation(credit_card=credit_card_number,
-                                  name_surname=name,
-                                  id_card=dni,
-                                  phone_number=phone_number,
-                                  room_type=room_type,
-                                  arrival_date=arrival,
-                                  num_days=days)
+                                        name_surname=name,
+                                        id_card=dni,
+                                        phone_number=phone_number,
+                                        room_type=room_type,
+                                        arrival_date=arrival,
+                                        num_days=days)
         self.assertEqual(exception_context.exception.message, "Reservation already exists")
         # now we check that the signature of the file is the same (the file didn't change
         # because the second call raised and exception)
@@ -96,12 +95,12 @@ class TestHotelReservation(TestCase):
 
         # first reservation
         my_manager.room_reservation(credit_card=credit_card_number,
-                                      name_surname=name,
-                                      id_card=dni,
-                                      phone_number=phone_number,
-                                      room_type=room_type,
-                                      arrival_date=arrival,
-                                      num_days=days)
+                                    name_surname=name,
+                                    id_card=dni,
+                                    phone_number=phone_number,
+                                    room_type=room_type,
+                                    arrival_date=arrival,
+                                    num_days=days)
 
         reservations_file = JSON_FILES_PATH + "store_reservation.json"
         # we calculater the files signature bejore calling the second method
@@ -120,12 +119,12 @@ class TestHotelReservation(TestCase):
         phone_number = "+347654321"
         with self.assertRaises(HotelManagementException) as exception_context:
             my_manager.room_reservation(credit_card=credit_card_number,
-                                  name_surname=name,
-                                  id_card=dni,
-                                  phone_number=phone_number,
-                                  room_type=room_type,
-                                  arrival_date=arrival,
-                                  num_days=days)
+                                        name_surname=name,
+                                        id_card=dni,
+                                        phone_number=phone_number,
+                                        room_type=room_type,
+                                        arrival_date=arrival,
+                                        num_days=days)
         self.assertEqual(exception_context.exception.message, "This ID card has another reservation")
         # now we check that the signature of the file is the same (the file didn't change
         # because the second call raised and exception)
@@ -136,7 +135,7 @@ class TestHotelReservation(TestCase):
             hash_new = ""
         self.assertEqual(hash_new, hash_original)
 
-    #pylint: disable=too-many-locals
+    # pylint: disable=too-many-locals
     @freeze_time("2024/03/22 13:00:00")
     def test_parametrized_cases_tests(self):
         """Parametrized cases read from testingCases_RF1.csv"""
@@ -161,12 +160,12 @@ class TestHotelReservation(TestCase):
                 if valid == "VALID":
                     with self.subTest(test_id + valid):
                         valor = my_manager.room_reservation(credit_card=credit_card_number,
-                                                      name_surname=name,
-                                                      id_card=dni,
-                                                      phone_number=phone_number,
-                                                      room_type=room_type,
-                                                      arrival_date=arrival,
-                                                      num_days=days)
+                                                            name_surname=name,
+                                                            id_card=dni,
+                                                            phone_number=phone_number,
+                                                            room_type=room_type,
+                                                            arrival_date=arrival,
+                                                            num_days=days)
                         self.assertEqual(result, valor)
                         # Check if this DNI is store in storeRequest.json
                         my_data = self.read_file()
@@ -175,7 +174,7 @@ class TestHotelReservation(TestCase):
                                                       name,
                                                       phone_number,
                                                       room_type,
-                                                      arrival,days)
+                                                      arrival, days)
                         found = False
                         for data in my_data:
                             if data["_HotelReservation__localizer"] == valor:
@@ -197,12 +196,12 @@ class TestHotelReservation(TestCase):
                             hash_original = ""
                         with self.assertRaises(HotelManagementException) as exception_context:
                             my_manager.room_reservation(credit_card=credit_card_number,
-                                                  name_surname=name,
-                                                  id_card=dni,
-                                                  phone_number=phone_number,
-                                                  room_type=room_type,
-                                                  arrival_date=arrival,
-                                                  num_days=days)
+                                                        name_surname=name,
+                                                        id_card=dni,
+                                                        phone_number=phone_number,
+                                                        room_type=room_type,
+                                                        arrival_date=arrival,
+                                                        num_days=days)
                         self.assertEqual(exception_context.exception.message, result)
 
                         # now we check that the signature of the file is the same

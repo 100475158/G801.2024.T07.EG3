@@ -1,12 +1,13 @@
 from .attribute import Attribute
 from ..hotel_management_exception import HotelManagementException
 
+
 class IdCard(Attribute):
 
     def __init__(self, id_card):
-        self._attr_pattern= r'^[0-9]{8}[A-Z]{1}$'
+        self._attr_pattern = r'^[0-9]{8}[A-Z]{1}$'
         self._error_message = "Invalid IdCard format"
-        self._attr_value= self._validate(id_card)
+        self._attr_value = self._validate(id_card)
 
     def _validate(self, id_card):
         super()._validate(id_card)
